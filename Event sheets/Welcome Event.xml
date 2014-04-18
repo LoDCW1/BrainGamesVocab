@@ -26,6 +26,10 @@
                 <action id="3" name="Set enabled" sid="9880566129692772" type="StartGame">
                     <param id="0" name="Mode">0</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="5729114979346411" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="-9" name="Set value" sid="6775585115013721" type="System">
                     <param id="0" name="Variable">CategoryGame1</param>
                     <param id="1" name="Value">CategoryListGame1.SelectedText</param>
@@ -116,6 +120,10 @@
                     <param id="0" name="Tag">&quot;QueryCategory&quot;</param>
                     <param id="1" name="URL">&quot;http://localhost/querycategory.php&quot;</param>
                 </action>
+                <action id="-4" name="Set layer visible" sid="3485238957125942" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7586372605369644">
@@ -125,6 +133,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-4" name="Set layer visible" sid="6786535768810995" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
                 <action id="1" name="Set size" sid="8060097248803061" type="ArrayCategory">
                     <param id="0" name="Width">tokencount(AJAX.LastData, &quot;|&quot;)-1</param>
                     <param id="1" name="Height">1</param>
@@ -307,6 +319,10 @@
                 <event-block sid="6400290485387812">
                     <conditions />
                     <actions>
+                        <action id="-4" name="Set layer visible" sid="142530170801973" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
                         <action id="2" name="Stop" sid="6868905432216917" type="CountdownSprite" />
                         <action id="5" name="Set frame" sid="7933715325555174" type="CountdownSprite">
                             <param id="0" name="Frame number">0</param>

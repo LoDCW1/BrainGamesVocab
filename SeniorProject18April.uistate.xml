@@ -10,7 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <event-sheet active="1">Addword Event</event-sheet>
+        <layout>Home</layout>
+        <layout>Landing</layout>
+        <layout>Welcome</layout>
+        <event-sheet>Addword Event</event-sheet>
         <event-sheet>Anagram Event</event-sheet>
         <event-sheet>Archer Event</event-sheet>
         <event-sheet>Final Event</event-sheet>
@@ -18,7 +21,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet>Landing Event</event-sheet>
         <event-sheet>Register Event</event-sheet>
         <event-sheet>Summary Event</event-sheet>
-        <event-sheet>Welcome Event</event-sheet>
+        <event-sheet active="1">Welcome Event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />

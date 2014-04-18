@@ -130,7 +130,7 @@
                         <x>210</x>
                         <y>48</y>
                         <z>0</z>
-                        <width>235</width>
+                        <width>328</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -375,6 +375,45 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Load" sid="9721000644762582">
+            <initially-visible>0</initially-visible>
+            <background-color>0,0,0</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>0.5</opacity>
+            <force-own-texture>0</force-own-texture>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Loading" uid="154">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>1</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>315</x>
+                        <y>224</y>
+                        <z>0</z>
+                        <width>187.941482544</width>
+                        <height>187.941482544</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

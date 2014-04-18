@@ -5,7 +5,7 @@
     <events>
         <variable constant="0" name="checkword" sid="1598595676447908" static="0" type="number">0</variable>
         <variable constant="0" name="testUrl" sid="3193763452678506" static="0" type="text"></variable>
-        <event-block sid="843879172210158">
+        <event-block collapsed="1" sid="843879172210158">
             <conditions>
                 <condition id="0" name="On clicked" sid="6480923235923898" type="AddButton" />
                 <condition id="0" inverted="1" name="Compare text" sid="5408260583367893" type="Word">
