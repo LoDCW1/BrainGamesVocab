@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Register Event</name>
+    <events>
+        <variable constant="0" name="testRegisterationURL" sid="6386183316466016" static="0" type="text"></variable>
+        <event-block sid="5832027117809582">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7535192116170736" type="Backtohome" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8926125927747719" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8261274723866767">
+            <conditions>
+                <condition id="0" name="On clicked" sid="3743240692225782" type="Returnhome" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3758560174824808" type="System">
+                    <param id="0" name="Layout">Home</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3468573775151213">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7281847132590716" type="registerbutton" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2761018412707075">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="6646948942586667" type="registerusernamebox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="7708854839864368" type="registerpasswordbox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="3065711604430129" type="registerfirstnamebox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                        <condition id="0" inverted="1" name="Compare text" sid="6231755453894158" type="registerlastnamebox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Post to URL" sid="5762866262378197" type="AJAX">
+                            <param id="0" name="Tag">&quot;PostRegister&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/register.php?Fname=&quot;&amp; registerfirstnamebox.Text&amp;&quot;&amp;Lname=&quot;&amp; registerlastnamebox.Text &amp;&quot;&amp;Username=&quot;&amp;registerusernamebox.Text&amp;&quot;&amp;Password=&quot;&amp;registerpasswordbox.Text&amp;&quot;&amp;UserType=&quot;&amp;registerlist.SelectedText</param>
+                            <param id="2" name="Data">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5520165521825397" type="System">
+                            <param id="0" name="Variable">testRegisterationURL</param>
+                            <param id="1" name="Value">&quot;http://localhost/register.php?Fname=&quot;&amp; registerfirstnamebox.Text&amp;&quot;&amp;Lname=&quot;&amp; registerlastnamebox.Text &amp;&quot;&amp;Username=&quot;&amp;registerusernamebox.Text&amp;&quot;&amp;Password=&quot;&amp;registerpasswordbox.Text&amp;&quot;&amp;UserType=&quot;&amp;registerlist.SelectedText</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="934741485538522">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7359377841838014" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1942861823673519" type="wrongregister">
+                            <param id="0" name="Text">&quot;Please fill in all fields.&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2558125374670412" type="wrongregister">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1509032092476327">
+            <conditions>
+                <condition id="0" name="On completed" sid="540479290118844" type="AJAX">
+                    <param id="0" name="Tag">&quot;PostRegister&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="409457129410641" type="System">
+                    <param id="0" name="Variable">UserID</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="223602564254853">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6806388384762677" type="System">
+                            <param id="0" name="Variable">UserID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">999</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="3824902006949241" type="Youareregistered">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="2" name="Set visible" sid="4310867258309786" type="Returnhome">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8803604709254923" type="Backtohome" />
+                        <action id="4" name="Set enabled" sid="9510958830642025" type="registerfirstnamebox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="2283520304290542" type="registerlastnamebox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="8076503962423844" type="registerpasswordbox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="3251507157502209" type="registerusernamebox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="7842527427739796" type="registerbutton">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="366394280281279" type="registerlist">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9662995138778345">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3782873809186511" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8674397792882957" type="wrongregister">
+                            <param id="0" name="Text">&quot;The username already exists. Please choose a new username.&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5324644084866836" type="wrongregister">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="466984206989763">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="9720545906541777" type="Youareregistered" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6954215946274332" type="wrongregister">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

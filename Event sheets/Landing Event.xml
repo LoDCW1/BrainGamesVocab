@@ -1,0 +1,505 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Landing Event</name>
+    <events>
+        <variable constant="0" name="Stage" sid="3916205847046945" static="0" type="number">1</variable>
+        <variable constant="0" name="localScore" sid="2247930517719082" static="0" type="number">0</variable>
+        <variable constant="0" name="totalScore" sid="839870374884453" static="0" type="number">0</variable>
+        <variable constant="0" name="LandingScore" sid="4464023423192049" static="0" type="number">0</variable>
+        <variable constant="0" name="shipTextIndx" sid="4345096712170653" static="0" type="number">0</variable>
+        <variable constant="0" name="PlatformIndex" sid="9141016025809771" static="0" type="number">0</variable>
+        <event-block collapsed="1" sid="3552332223516096">
+            <conditions>
+                <condition id="0" name="On function" sid="9959320527733583" type="Function">
+                    <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="temp1" sid="927387077131636" static="0" type="text"></variable>
+                <variable constant="0" name="Temp2" sid="6194554428211428" static="0" type="text"></variable>
+                <variable constant="0" name="Rnum" sid="1755891015491954" static="0" type="number">0</variable>
+                <event-block sid="1653788495844639">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5368993241785953" type="System">
+                            <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9163612612824493" type="System">
+                            <param id="0" name="Variable">temp1</param>
+                            <param id="1" name="Value">ShipSet.At(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4431493715510278" type="System">
+                            <param id="0" name="Variable">Rnum</param>
+                            <param id="1" name="Value">random(1,4)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7912590883046601" type="System">
+                            <param id="0" name="Variable">Temp2</param>
+                            <param id="1" name="Value">ShipSet.At(Rnum)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9541423370377443" type="ShipSet">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Temp2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9295150927677732" type="ShipSet">
+                            <param id="0" name="X">Rnum</param>
+                            <param id="1" name="Value">Temp1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="8926554477564362">
+            <conditions>
+                <condition id="0" name="On function" sid="2395154812472972" type="Function">
+                    <param id="0" name="Name">&quot;setPlatform&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3726776124090163">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9635192368112228" type="Platform">
+                            <param id="0" name="Unique ID">14</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5999094217001204" type="PlatformText">
+                            <param id="0" name="Text">QueSet2.At(PlatformIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="163319294474146" type="ShipSet">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4406927049043071" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1055463130057893" type="System">
+                            <param id="0" name="Variable">PlatformIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6738979703114992">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7001353832791991" type="Platform">
+                            <param id="0" name="Unique ID">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1030154373706098" type="PlatformText">
+                            <param id="0" name="Text">QueSet2.At(PlatformIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="434353876237485" type="ShipSet">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1501088145483835" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1271022239931272" type="System">
+                            <param id="0" name="Variable">PlatformIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7539364729684993">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4391062727852669" type="Platform">
+                            <param id="0" name="Unique ID">16</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2692992711828524" type="PlatformText">
+                            <param id="0" name="Text">QueSet2.At(PlatformIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="328608428387411" type="ShipSet">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1160739486433625" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="422073543655275" type="System">
+                            <param id="0" name="Variable">PlatformIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6411743581644703">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="908630649049358" type="Platform">
+                            <param id="0" name="Unique ID">17</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4354387460764924" type="PlatformText">
+                            <param id="0" name="Text">QueSet2.At(PlatformIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8674546145354977" type="ShipSet">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7244801991764022" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3866827487958259" type="System">
+                            <param id="0" name="Variable">PlatformIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6732306759033341">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5959337876853065" type="Platform">
+                            <param id="0" name="Unique ID">18</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8209507328892428" type="PlatformText">
+                            <param id="0" name="Text">QueSet2.At(PlatformIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="879824011978482" type="ShipSet">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8855030208179269" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset2.At(PlatformIndex,0)</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7491974468618071" type="Function">
+                            <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9274010176226519" type="System">
+                            <param id="0" name="Variable">PlatformIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="7299387270746103" type="Ship">
+                            <param id="0" name="X">320</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="3807382314812687" type="Ship">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2658911676603145">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6148316300463773" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8640259645065765" type="System">
+                    <param id="0" name="Variable">Stage</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="6218425085936387" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Request URL" sid="3980895412700443" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4056831846618337">
+            <conditions>
+                <condition id="0" name="On completed" sid="6246741985047777" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="x" sid="190033771189836" static="0" type="number">0</variable>
+                <event-block sid="6184238680217523">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="3146803795104294" type="QueSet2">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="4400838006903544" type="QueSet2">
+                            <param id="0" name="X">QueSet2.CurX</param>
+                            <param id="1" name="Y">QueSet2.CurY</param>
+                            <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3363671859354649" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1065451639781324">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="7351910118462208" type="Function">
+                            <param id="0" name="Name">&quot;setPlatform&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8370277116513192">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="8938324437714455" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="1346703228499293" type="Thrust">
+                    <param id="0" name="X">ship.X</param>
+                    <param id="1" name="Y">ship.Y+97</param>
+                </action>
+                <action id="-3" name="Set position" sid="204917750535357" type="ShipText">
+                    <param id="0" name="X">ship.X</param>
+                    <param id="1" name="Y">ship.Y</param>
+                </action>
+                <action id="0" name="Set text" sid="9629867525673015" type="ShipText">
+                    <param id="0" name="Text">ShipSet.At(shipTextIndx)</param>
+                </action>
+                <action id="-10" name="Set value" sid="5713822177272584" type="Ship">
+                    <param id="0" name="Instance variable">Meaning</param>
+                    <param id="1" name="Value">ShipSet.At(shipTextIndx)</param>
+                </action>
+                <action id="0" name="Set text" sid="6407920496544959" type="scoreCheck">
+                    <param id="0" name="Text">&quot;Score: &quot;&amp;localScore</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8939152304194164">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="540766148917986" type="Ship">
+                    <param id="0" name="Object">Platform</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="1087605185018467">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2544624883355286" type="Platform">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">ShipText.Text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="5769943357166251" type="Ship">
+                            <param id="0" name="Instance variable">isNotPaused</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="5031736216848602" type="Ship">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action behavior="8Direction" id="8" name="Set enabled" sid="8598148975705618" type="Ship">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3273223346876599" type="Correct">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="9721883722399524" type="Correct" />
+                        <action id="-16" name="Wait" sid="5193405189983066" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4609147646756392" type="Ship" />
+                        <action id="-10" name="Add to" sid="2765396460764656" type="System">
+                            <param id="0" name="Variable">shipTextIndx</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3573954398479879" type="System">
+                            <param id="0" name="Variable">Count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5667765952034579" type="System">
+                            <param id="0" name="Object to create">Ship</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="264890505784408" type="Ship">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="984002722705172" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5240337150912478">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7983044766666587" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="3321847732685008" type="System">
+                                    <param id="0" name="Variable">totalScore</param>
+                                    <param id="1" name="Value">localScore</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="4123482762450525" type="System">
+                                    <param id="0" name="Layout">Summary</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="593038517582243">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6857429713203569" type="System">
+                                    <param id="0" name="Variable">shipTextIndx</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6046372219607997" type="System">
+                                    <param id="0" name="Variable">shipTextIndx</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7911606413312173" type="Function">
+                                    <param id="0" name="Name">&quot;setPlatform&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9109500159750525">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="645268927339905" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="4849381700314825" type="Wrong">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="8740535190944708" type="Wrong" />
+                        <action id="-9" name="Destroy" sid="2335419854587668" type="Ship" />
+                        <action id="0" name="Spawn another object" sid="6893007630782812" type="Ship">
+                            <param id="0" name="Object">Explosion</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9093255488471651" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6207361515568872" type="System">
+                            <param id="0" name="Object to create">Ship</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">320</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5210750596407097" type="Ship">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="4857170558038837" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1409209973995672">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="6725738732042272" type="Ship">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">480</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2324303254177161" type="Ship" />
+                <action id="0" name="Spawn another object" sid="2217988095584236" type="Ship">
+                    <param id="0" name="Object">Explosion</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="7058637038252986" type="System">
+                    <param id="0" name="Object to create">Ship</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">320</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7039992710228295" type="Ship">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6465974696036353">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="9083443795286425" type="Ship">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">590</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="2611950404498042" type="Ship">
+                    <param id="0" name="X">590</param>
+                </action>
+                <action id="-1" name="Set X" sid="2927812664285768" type="Thrust">
+                    <param id="0" name="X">590</param>
+                </action>
+                <action id="-1" name="Set X" sid="7171840539665005" type="ShipText">
+                    <param id="0" name="X">590</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7007343644550783">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="7825996305184312" type="Ship">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="9730111948676624" type="Ship">
+                    <param id="0" name="X">50</param>
+                </action>
+                <action id="-1" name="Set X" sid="8431008751542139" type="Thrust">
+                    <param id="0" name="X">50</param>
+                </action>
+                <action id="-1" name="Set X" sid="3045978371805858" type="ShipText">
+                    <param id="0" name="X">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="286553436080529">
+            <conditions>
+                <condition id="2" name="Key is down" sid="3363683271801527" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3387493215620612" type="Ship">
+                    <param id="0" name="Instance variable">isNotPaused</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="53469676284612" type="Ship">
+                    <param id="0" name="Speed">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4804674017842922">
+            <conditions>
+                <condition id="3" name="On key released" sid="7770488875091134" type="Keyboard">
+                    <param id="0" name="Key">40 (Down arrow)</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="544106111536724" type="Ship">
+                    <param id="0" name="Instance variable">isNotPaused</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4715262083243673" type="Ship">
+                    <param id="0" name="Speed">80</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

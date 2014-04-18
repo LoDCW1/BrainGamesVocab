@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Final Event</name>
+    <events>
+        <comment>Query categories in the score table and push them into the picklist as options.</comment>
+        <event-block sid="7131948742889749">
+            <conditions>
+                <condition id="0" name="On completed" sid="1613796613573854" type="AJAX">
+                    <param id="0" name="Tag">&quot;QueryCategoryFinalPage&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="5354079508593749" type="ArrayCategoryFinal">
+                    <param id="0" name="Width">tokencount(AJAX.LastData, &quot;|&quot;)-1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4142756947136861">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="4614353592719293" type="ArrayCategoryFinal">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="394587835371954" type="ArrayCategoryFinal">
+                            <param id="0" name="X">ArrayCategoryFinal.CurX</param>
+                            <param id="1" name="Value">tokenat(Ajax.LastData, ArrayCategoryFinal.CurX, &quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7743685002922193">
+                    <conditions>
+                        <condition id="-10" name="For" sid="9786306023633915" type="System">
+                            <param id="0" name="Name">&quot;AddToPickListFinalPage&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">ArrayCategoryFinal.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="5101633024375976" type="PicklistFinal">
+                            <param id="0" name="Text">ArrayCategoryFinal.At(loopindex)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Needs to be fixed. No &quot;Score&quot; variable exists.</comment>
+        <event-block sid="1797497083273999">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8848724098073618" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="1904310172435066" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveScoreGame1&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame1&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(0)</param>
+                    <param id="2" name="Data">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="3898097066091144" type="System">
+                    <param id="0" name="Variable">testUrl</param>
+                    <param id="1" name="Value">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame3&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Get scores for specified categories.</comment>
+        <event-block sid="9887608229767001">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="2572874681806697" type="PicklistFinal" />
+                <condition id="-8" name="Compare two values" sid="3908369906255672" type="System">
+                    <param id="0" name="First value">PicklistFinal.SelectedText</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Second value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="270703214255326" type="AJAX">
+                    <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/getscores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;PicklistFinal.SelectedText</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9701383349393717" type="Performancetxt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8126183801754093">
+            <conditions>
+                <condition id="0" name="On completed" sid="8651456827108639" type="AJAX">
+                    <param id="0" name="Tag">&quot;GetScores&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8695676864803752">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="8220258274627909" type="ArrayScoreFinal">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="8909019370727315" type="ArrayScoreFinal">
+                            <param id="0" name="X">ArrayScoreFinal.CurX</param>
+                            <param id="1" name="Value">tokenat(Ajax.LastData, ArrayScoreFinal.CurX, &quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1648423700093578">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9622843979158779" type="System">
+                            <param id="0" name="Object">Performancetxt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4304835488574762" type="Performancetxt">
+                            <param id="0" name="Text">ArrayScoreFinal.At(Performancetxt.IID)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9320643995407958">
+            <conditions>
+                <condition id="0" name="On completed" sid="9844179961126479" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveScoreGame1&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="8380677253983358" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveScoreGame2&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame2&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(1)</param>
+                    <param id="2" name="Data">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3662354874973933">
+            <conditions>
+                <condition id="0" name="On completed" sid="6453360087048043" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveScoreGame2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Post to URL" sid="4456285236760446" type="AJAX">
+                    <param id="0" name="Tag">&quot;SaveScoreGame3&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame3&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(2)</param>
+                    <param id="2" name="Data">&quot;&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="8258317196927486" type="AJAX">
+                    <param id="0" name="Tag">&quot;QueryCategoryFinalPage&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/querycategoryforfinal.php&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

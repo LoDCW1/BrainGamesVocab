@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Anagram Event</name>
+    <events>
+        <variable constant="0" name="letterLim" sid="5546512124859015" static="0" type="number">1</variable>
+        <event-block collapsed="1" sid="2855485716244288">
+            <conditions>
+                <condition id="0" name="On function" sid="1642646664524909" type="Function">
+                    <param id="0" name="Name">&quot;loadAlphabet&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="index" sid="5021183623952784" static="0" type="number">0</variable>
+                <event-block sid="7524616756556367">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Set at X" sid="6847406450783531" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;a&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9412534160219174" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="3095750751889703" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;b&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3856541518465511" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8538495186930072" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;c&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9928332565427964" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="2864462448867193" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;d&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9420108427573198" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8296760391281517" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;e&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5797389948602031" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8456171968650133" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;f&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1194849089761514" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="595325089504343" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;g&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7947936898750452" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="116496735162481" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;h&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="800906314331847" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="4675762807305448" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;i&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="357944580898453" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6104207393592115" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;j&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7706822310227305" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6516873086597312" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;k&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="598353445789721" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6308646545292156" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;l&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7924449088382847" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6520473764171936" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;m&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="8435244063739295" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6215641239140475" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;n&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6158350409687326" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="144653177767476" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;o&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="2865438206201968" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="1074227617075935" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;p&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5978711421472469" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8267112058076527" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;q&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6015685166655359" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9526104856200913" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;r&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4672185270465582" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="641044530425668" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;s&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1856745405264284" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9229782657020177" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;t&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5273624485427729" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="2557822014833276" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;u&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="413465705405477" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="823947889480731" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;v&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5739606554266403" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="1421785685918123" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;w&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="9678399409377199" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="2811420482433257" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;x&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1124223413032552" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6614539692366313" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;y&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6138631386383539" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="9796529141661856" type="Alphabet">
+                            <param id="0" name="X">index</param>
+                            <param id="1" name="Value">&quot;z&quot;</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7545086354845937" type="System">
+                            <param id="0" name="Variable">index</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1367132198535937">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="50425633184162" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4922425896063572" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9771561015125099" type="System">
+                    <param id="0" name="Variable">Stage</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-12" name="Set group active" sid="2868949551542158" type="System">
+                    <param id="0" name="Group name">&quot;chopWord&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="0" name="Call function" sid="5020363373702749" type="Function">
+                    <param id="0" name="Name">&quot;loadAlphabet&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Request URL" sid="6022924035977617" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame3</param>
+                </action>
+                <action id="-9" name="Set value" sid="7047110430917708" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="947078608378123">
+            <conditions>
+                <condition id="0" name="On completed" sid="2486332227749099" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="x" sid="9116824570853813" static="0" type="number">0</variable>
+                <event-block sid="6794544606863644">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="4394242315099292" type="QueSet4">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="1529471530445327" type="QueSet4">
+                            <param id="0" name="X">QueSet4.CurX</param>
+                            <param id="1" name="Y">QueSet4.CurY</param>
+                            <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1524786885993545" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5199577019231585">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="6568614164160377" type="wordQueue">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="8239613942635907" type="wordQueue">
+                            <param id="0" name="X">wordQueue.CurX</param>
+                            <param id="1" name="Value">QueSet4.At(wordQueue.CurX,0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5449768465160094">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="2431796310602023" type="System">
+                            <param id="0" name="Group name">&quot;chopWord&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5799417923256034" type="System">
+                            <param id="0" name="Group name">&quot;DoShuffle&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="8112874797351798" type="System">
+                            <param id="0" name="Group name">&quot;buildChoice&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group collapsed="1" description="" inactive="1" sid="3593156812436689" title="chopWord">
+            <sub-events>
+                <event-block sid="9023311830106646">
+                    <conditions />
+                    <actions>
+                        <action id="1" name="Set size" sid="6552051073406586" type="anagramWord">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="1" name="Set size" sid="6049896004707333" type="letterSet">
+                            <param id="0" name="Width">0</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="419321678819731" type="anagramWord">
+                            <param id="0" name="Instance variable">len</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1816288076015254">
+                    <conditions>
+                        <condition id="-10" name="For" sid="388908040652248" type="System">
+                            <param id="0" name="Name">&quot;&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">len(wordQueue.At(Count))</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="9004635679586578" type="anagramWord">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">lowercase(right(left(wordQueue.At(Count),loopindex),loopindex+1))</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="5" name="Push" sid="5064174913885973" type="letterSet">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">lowercase(right(left(wordQueue.At(Count),loopindex),loopindex+1))</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="338772277739234" type="anagramWord">
+                            <param id="0" name="Instance variable">len</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4705863998416048">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="8682036692134141" type="Test1">
+                            <param id="0" name="Text">QueSet4.At(Count,1)</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="9818010487223966" type="System">
+                            <param id="0" name="Group name">&quot;chopWord&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1881088241243665" type="System">
+                            <param id="0" name="Variable">letterLim</param>
+                            <param id="1" name="Value">anagramWord.len</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" inactive="1" sid="6802633907982025" title="DoShuffle">
+            <sub-events>
+                <variable constant="0" name="temp" sid="538899826110588" static="0" type="text"></variable>
+                <variable constant="0" name="temp2" sid="6007499427236608" static="0" type="text"></variable>
+                <variable constant="0" name="Rnum" sid="1504165053089388" static="0" type="number">0</variable>
+                <event-block sid="1460166655070844">
+                    <conditions>
+                        <condition id="-10" name="For" sid="5418536419879769" type="System">
+                            <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">anagramWord.len-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3642369779886673" type="System">
+                            <param id="0" name="Variable">Rnum</param>
+                            <param id="1" name="Value">floor(random(loopindex,anagramWord.len))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3676307042043127" type="System">
+                            <param id="0" name="Variable">temp</param>
+                            <param id="1" name="Value">anagramWord.At(loopindex)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5447846128644816" type="System">
+                            <param id="0" name="Variable">temp2</param>
+                            <param id="1" name="Value">anagramWord.At(Rnum)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8231723595585504" type="anagramWord">
+                            <param id="0" name="X">loopindex</param>
+                            <param id="1" name="Value">temp2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8708105544000937" type="anagramWord">
+                            <param id="0" name="X">Rnum</param>
+                            <param id="1" name="Value">temp</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="7775427693949547" type="System">
+                            <param id="0" name="Group name">&quot;DoShuffle&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <variable constant="0" name="position" sid="5910930891625843" static="0" type="number">0</variable>
+        <event-group description="" inactive="1" sid="4639110901065042" title="buildChoice">
+            <sub-events>
+                <event-block sid="6493716748175695">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="7534338298677588" type="System">
+                            <param id="0" name="Variable">position</param>
+                            <param id="1" name="Value">640/(anagramWord.len+1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="455030393948484">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="1894084760719628" type="anagramWord">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="583918263282927" type="System">
+                            <param id="0" name="Object to create">choiceTile</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">(position*(anagramWord.CurX))+ position</param>
+                            <param id="3" name="Y">400</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8691712241100331" type="choiceTile">
+                            <param id="0" name="Text">anagramWord.At(anagramWord.CurX)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4369360178147877">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="7315723824444642" type="System">
+                            <param id="0" name="Group name">&quot;buildChoice&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="4256886204623289">
+            <conditions>
+                <condition id="0" name="On click" sid="7736933230076803" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="9718576497103029" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5338776709227441" type="choiceTile" />
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="1699590811316353">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="1735134216547719" type="System">
+                            <param id="0" name="Group name">&quot;chopWord&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="8637611864696769" type="System">
+                            <param id="0" name="Group name">&quot;DoShuffle&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="3175965273050891" type="System">
+                            <param id="0" name="Group name">&quot;buildChoice&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4852456798995962">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="934530439114782" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">choiceTile</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="939906922604606">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9455271531011432" type="System">
+                            <param id="0" name="First value">choiceTile.Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">letterSet.At(LetterIndex)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1317167295555918" type="ansTile">
+                            <param id="0" name="Text">ansTile.Text&amp;choiceTile.Text</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="330389674116837" type="System">
+                            <param id="0" name="Variable">LetterIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="156431959603365" type="choiceTile" />
+                    </actions>
+                </event-block>
+                <event-block sid="7930328849465246">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="86563761121991" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1641526239118393" type="Wrong">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="2493546546109057" type="Wrong" />
+                        <action id="-11" name="Subtract from" sid="7616437833772592" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">0.25</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7487534313672398">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8458610093167384" type="System">
+                    <param id="0" name="Variable">LetterIndex</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">letterLim</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6356667310221701" type="Correct">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="1785199969515616" type="Correct" />
+                <action id="-10" name="Add to" sid="608289998210782" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Add to" sid="8164030712026329" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="8181764955165012" type="System">
+                    <param id="0" name="Variable">LetterIndex</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="7935319586888856" type="ansTile">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-12" name="Set group active" sid="4467257938304186" type="System">
+                    <param id="0" name="Group name">&quot;chopWord&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="4134887416987258" type="System">
+                    <param id="0" name="Group name">&quot;DoShuffle&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-12" name="Set group active" sid="3593458442412909" type="System">
+                    <param id="0" name="Group name">&quot;buildChoice&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6246511140979298">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3661483981238482" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6629428298663905" type="System">
+                    <param id="0" name="Layout">Summary</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

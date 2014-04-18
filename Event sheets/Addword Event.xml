@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Addword Event</name>
+    <events>
+        <variable constant="0" name="checkword" sid="1598595676447908" static="0" type="number">0</variable>
+        <variable constant="0" name="testUrl" sid="3193763452678506" static="0" type="text"></variable>
+        <event-block sid="843879172210158">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6480923235923898" type="AddButton" />
+                <condition id="0" inverted="1" name="Compare text" sid="5408260583367893" type="Word">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+                <condition id="0" inverted="1" name="Compare text" sid="1521806045635406" type="Meaning">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="1" name="Case">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="238203603190539" type="System">
+                    <param id="0" name="Variable">testUrl</param>
+                    <param id="1" name="Value">&quot;http://localhost/addword.php?Word=&quot;&amp; Word.Text&amp; &quot;&amp;Meaning=&quot;&amp; Meaning.Text &amp;&quot;&amp;Category =&quot;&amp;Categorybox.Text</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block any="1" sid="2445586368355874">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Compare text" sid="1506647475728692" type="Categorybox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="4" inverted="1" name="Compare selected item text" sid="9678567261202366" type="AddwordChooseCategory">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>Perform query against the database to check if the word exists. PHP will check if the word exists or not.</comment>
+                        <event-block sid="5987754997528934">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="9712579136718865" type="AddwordAddNewCategoryCheckbox" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2278951706878837">
+                                    <conditions />
+                                    <actions>
+                                        <action id="2" name="Post to URL" sid="9058449206877116" type="AJAX">
+                                            <param id="0" name="Tag">&quot;PostWord&quot;</param>
+                                            <param id="1" name="URL">&quot;http://localhost/addword.php?Word=&quot;&amp; Word.Text&amp; &quot;&amp;Meaning=&quot;&amp;Meaning.Text &amp;&quot;&amp;Category=&quot;&amp;Categorybox.Text</param>
+                                            <param id="2" name="Data">&quot;&quot;</param>
+                                        </action>
+                                        <action id="3" name="Set enabled" sid="8824445363422076" type="AddAnotherWord">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2872575758418631">
+                            <conditions>
+                                <condition id="1" name="Is checked" sid="2704533884257716" type="AddwordChooseExistingCategoryCheckbox" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Post to URL" sid="7663972100255768" type="AJAX">
+                                    <param id="0" name="Tag">&quot;PostWord&quot;</param>
+                                    <param id="1" name="URL">&quot;http://localhost/addword.php?Word=&quot;&amp;Word.Text&amp; &quot;&amp;Meaning=&quot;&amp;Meaning.Text &amp;&quot;&amp;Category=&quot;&amp;AddwordChooseCategory.SelectedText</param>
+                                    <param id="2" name="Data">&quot;&quot;</param>
+                                </action>
+                                <action id="3" name="Set enabled" sid="7092658977229794" type="AddAnotherWord">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6912851741768525">
+            <conditions>
+                <condition id="0" name="On completed" sid="5479378891925595" type="AJAX">
+                    <param id="0" name="Tag">&quot;PostWord&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5327864918547993" type="System">
+                    <param id="0" name="Variable">checkword</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <comment>If the PHP returns 666 show first text. If PHP returns 999 show second text.</comment>
+                <event-block any="1" sid="3291190336830341">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1984748433618369" type="System">
+                            <param id="0" name="Variable">checkword</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">666</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5942859482507163" type="WordAlreadyExists">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6839009679846089" type="Pleasefillinwordandmeaning">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4920596445413232" type="Result">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5739839701289088">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1113701411967117" type="System">
+                            <param id="0" name="Variable">checkword</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">999</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="9521274418316508" type="Result">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8512724117390424" type="Pleasefillinwordandmeaning">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2746848626171437" type="WordAlreadyExists">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9532523016481503">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6034519988929675" type="AddAnotherWord" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="2895204696825256" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="935232864816176">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8475703459817707" type="ViewExisting" />
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="3131424113485965" type="br">
+                    <param id="0" name="URL">&quot;http://localhost/show.php&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8486485599171458">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6289350382454871" type="backtohomefromaddword" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4191202556266074" type="System">
+                    <param id="0" name="Layout">Welcome</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3670579137723081">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2015925756670102" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set CSS style" sid="4835315981208474" type="AddwordChooseExistingCategoryCheckbox">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;white&quot;</param>
+                </action>
+                <action id="5" name="Set CSS style" sid="628930290531282" type="AddwordAddNewCategoryCheckbox">
+                    <param id="0" name="Property name">&quot;color&quot;</param>
+                    <param id="1" name="Value">&quot;white&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="1460888998308044" type="AJAX">
+                    <param id="0" name="Tag">&quot;QueryCategoryforAddword&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/querycategory.php&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1787927731311635">
+            <conditions>
+                <condition id="0" name="On completed" sid="6438304607812636" type="AJAX">
+                    <param id="0" name="Tag">&quot;QueryCategoryforAddword&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="3220480146553721" type="ArrayCategory">
+                    <param id="0" name="Width">tokencount(AJAX.LastData, &quot;|&quot;)-1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5763945987122446">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="281068655556836" type="ArrayCategory">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="4835433851191269" type="ArrayCategory">
+                            <param id="0" name="X">ArrayCategory.CurX</param>
+                            <param id="1" name="Value">tokenat(Ajax.LastData, ArrayCategory.CurX, &quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5650421387645447">
+                    <conditions>
+                        <condition id="-10" name="For" sid="8776404930461335" type="System">
+                            <param id="0" name="Name">&quot;AddToPickList&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">ArrayCategory.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Add item" sid="1358872030276049" type="AddwordChooseCategory">
+                            <param id="0" name="Text">ArrayCategory.At(loopindex)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6812748302941252">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8695673961034135" type="AddButton" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="6841055480209105">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="5460694576266299" type="Meaning">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="0" name="Compare text" sid="8129895931129221" type="Word">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5708166606053683" type="Pleasefillinwordandmeaning">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8121526231848531">
+                    <conditions>
+                        <condition id="0" name="Compare text" sid="713371024022863" type="Categorybox">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                        <condition id="4" name="Compare selected item text" sid="1553076172739708" type="AddwordChooseCategory">
+                            <param id="0" name="Text to compare">&quot;&quot;</param>
+                            <param id="1" name="Case sensitivity">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="1491398724213821" type="Pleasefillinwordandmeaning">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="3149097101935548">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8260058102475383" type="System">
+                            <param id="0" name="Variable">checkword</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">999</param>
+                        </condition>
+                        <condition id="-9" name="Is visible" sid="1563680526228897" type="Result" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set enabled" sid="1549181299213996" type="Categorybox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="7570394547531047" type="AddwordChooseCategory">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="7911884342855723" type="Word">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="4" name="Set enabled" sid="5262810256197999" type="Meaning">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="2286997941911049" type="AddwordAddNewCategoryCheckbox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="9635280001157633" type="AddwordChooseExistingCategoryCheckbox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="4956068961793172" type="AddButton">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4170205661985113">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7245540491934938" type="AddwordChooseExistingCategoryCheckbox" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set enabled" sid="3120840032096467" type="Categorybox">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="3" name="Set enabled" sid="9485985552522578" type="AddwordChooseCategory">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="6" name="Set checked" sid="8953531273691105" type="AddwordAddNewCategoryCheckbox">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="960814667383668">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8272733357817532" type="AddwordAddNewCategoryCheckbox" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="514797100403819" type="AddwordChooseCategory">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="4" name="Set enabled" sid="1526143985885768" type="Categorybox">
+                    <param id="0" name="Mode">1</param>
+                </action>
+                <action id="6" name="Set checked" sid="5431235002573861" type="AddwordChooseExistingCategoryCheckbox">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5224386617831744">
+            <conditions>
+                <condition id="-9" name="Is visible" sid="7238538304051622" type="Result" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4353901796612518" type="Pleasefillinwordandmeaning">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Marksman Event</name>
+    <events>
+        <variable constant="0" name="Count" sid="1876819128619628" static="0" type="number">0</variable>
+        <variable constant="0" name="Question" sid="8453778115428104" static="0" type="text"></variable>
+        <variable constant="0" name="Speed" sid="8320296869676485" static="0" type="number">200</variable>
+        <variable constant="0" name="Score" sid="9211296679184349" static="0" type="number">0</variable>
+        <variable constant="0" name="Num" sid="2051619169601892" static="0" type="text"></variable>
+        <event-block sid="1057663286127777">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3953844154132583" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="1578729598310956" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                    <param id="1" name="File">set_of_question.json</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6083922906680192">
+            <conditions>
+                <condition id="0" name="On completed" sid="1735881542125084" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="11" name="Load" sid="668880417079368" type="QueSet1">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                </action>
+                <action id="-9" name="Set value" sid="8037912904552115" type="System">
+                    <param id="0" name="Variable">Question</param>
+                    <param id="1" name="Value">QueSet1.At(Count,0)</param>
+                </action>
+                <action id="0" name="Set text" sid="4371986720119975" type="QText">
+                    <param id="0" name="Text">Question</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="787837615277492">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="7124737707985446" type="System" />
+            </conditions>
+            <actions>
+                <action id="-22" name="Set angle toward position" sid="9723287210894349" type="Marksman">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="0" name="Set text" sid="2280217410870118" type="Score">
+                    <param id="0" name="Text">&quot;Score: &quot;&amp; Score</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4340589187060519" type="Target">
+                    <param id="0" name="Speed">Speed</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="7437186519599781" type="AnsText">
+                    <param id="0" name="Speed">Speed</param>
+                </action>
+                <action id="-9" name="Set value" sid="7605752473520754" type="System">
+                    <param id="0" name="Variable">Question</param>
+                    <param id="1" name="Value">QueSet1.At(Count,0)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4201806771542095">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="7611012874821354" type="System">
+                    <param id="0" name="Interval (seconds)">random(0.3,1.3)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="6500986211610633" type="System">
+                    <param id="0" name="Object to create">Target</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">random(50,450)</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="7811248614574542" type="Target">
+                    <param id="0" name="Instance variable">tarIndex</param>
+                    <param id="1" name="Value">floor(random(10))</param>
+                </action>
+                <action id="-9" name="Set value" sid="970414983996675" type="System">
+                    <param id="0" name="Variable">Num</param>
+                    <param id="1" name="Value">QueSet1.At(Target.tarIndex,1)</param>
+                </action>
+                <action id="-10" name="Set value" sid="60797115194311" type="Target">
+                    <param id="0" name="Instance variable">Meaning</param>
+                    <param id="1" name="Value">QueSet1.At(Target.tarIndex,0)</param>
+                </action>
+                <action id="0" name="Set text" sid="8983777109740447" type="AnsText">
+                    <param id="0" name="Text">Num</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4390300848253224" type="Target">
+                    <param id="0" name="Angle">90</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="4846360648980528" type="AnsText">
+                    <param id="0" name="Angle">90</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4285730913178337">
+            <conditions>
+                <condition id="0" name="On click" sid="6930007133371148" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="3731903776779787">
+            <conditions />
+            <actions />
+            <sub-events>
+                <event-block sid="6125167458266028">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2580904061440372" type="System">
+                            <param id="0" name="Variable">Question</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Target.Meaning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3671434008015408" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="35933620807333" type="System">
+                            <param id="0" name="Variable">Speed</param>
+                            <param id="1" name="Value">15</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4860310866497267" type="System">
+                            <param id="0" name="Variable">Count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5223121080272716" type="QText">
+                            <param id="0" name="Text">QueSet1.At(Count,0)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8392369851651329" type="Target" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6773817928663685">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="72556106333866" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="4790161890241493" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5258149694871548" type="QText">
+                                    <param id="0" name="Text">QueSet1.At(Count,0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7910670372882732">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="179598054302271" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="8351929309157664" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6413086681776194" type="QText">
+                            <param id="0" name="Text">QueSet1.At(Count,0)</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3120164571936063" type="Target" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3856223337506254">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="8545437708767602" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5820707588077848" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Set text" sid="536912550459363" type="QText">
+                                    <param id="0" name="Text">QueSet1.At(Count,0)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

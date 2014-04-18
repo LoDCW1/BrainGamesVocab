@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Summary Event</name>
+    <events>
+        <event-block sid="3325862397006701">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="5703069976146239" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="7947961690454813" type="ratingStar" />
+                <action id="-9" name="Set value" sid="3082161360808904" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">floor(localScore)</param>
+                </action>
+                <action id="2" name="Set at X" sid="4527119025093837" type="scoreSet">
+                    <param id="0" name="X">Stage-1</param>
+                    <param id="1" name="Value">localScore</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7849145663297438">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2410701015567235" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9198000256562495" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2488689377770705">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5590253178429591" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="5968804357772729" type="stageScore">
+                    <param id="0" name="Text">stageScore.scoreCount</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7607246426620594">
+            <conditions>
+                <condition id="-23" name="While" sid="1444265484351922" type="System" />
+                <condition id="-7" name="Compare instance variable" sid="7848563359233446" type="stageScore">
+                    <param id="0" name="Instance variable">scoreCount</param>
+                    <param id="1" name="Comparison">2</param>
+                    <param id="2" name="Value">localScore</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="3786567630093365" type="System">
+                    <param id="0" name="Interval (seconds)">0.05</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="948767913709673" type="stageScore">
+                    <param id="0" name="Instance variable">scoreCount</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7465651618836578">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9239020574011566" type="stageScore">
+                            <param id="0" name="Instance variable">scoreCount</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">localScore-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="6515320350667782" type="System">
+                            <param id="0" name="Group name">&quot;doStar&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="6111548455467995">
+            <conditions>
+                <condition id="-7" name="Compare time" sid="84493015980508" type="System">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Time (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="8303464953530731">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="699365711605342" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">nextBut</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2347087579728353" type="System">
+                    <param id="0" name="Variable">localScore</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8437839216385794">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2160510002211407" type="System">
+                            <param id="0" name="Variable">Stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="9587459129465059" type="System">
+                            <param id="0" name="Layout">Archer</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8179969102160291">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8443471573315675" type="System">
+                            <param id="0" name="Variable">Stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="510932508010893" type="System">
+                            <param id="0" name="Layout">Anagram</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7093844851568379">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4685769076843338" type="System">
+                            <param id="0" name="Variable">Stage</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="2011023871455746" type="System">
+                            <param id="0" name="Layout">Final</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" inactive="1" sid="6210968658980328" title="doStar">
+            <sub-events>
+                <event-block sid="798322363187573">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5419534271406578" type="ratingStar">
+                            <param id="0" name="Unique ID">33</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="842963258390746" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7938927141546127" type="ratingStar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6790351821637322">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9361563261556534" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1021726547994221" type="ratingStar">
+                            <param id="0" name="Unique ID">34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="826673889171031" type="ratingStar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5435896133461217">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6824207709859269" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4212275735248496" type="ratingStar">
+                            <param id="0" name="Unique ID">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7912103853331532" type="ratingStar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8131528841866119">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3101740942443843" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="5602060962940109" type="ratingStar">
+                            <param id="0" name="Unique ID">36</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4429875481366222" type="ratingStar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4774038882062152">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2451414718739433" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="2596031607079536" type="ratingStar">
+                            <param id="0" name="Unique ID">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="3734385016592149" type="ratingStar">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2495597660288079">
+                    <conditions />
+                    <actions>
+                        <action id="-12" name="Set group active" sid="1744413522030283" type="System">
+                            <param id="0" name="Group name">&quot;doStar&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="5886606290763744">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6889746284011141" type="System" />
+            </conditions>
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Archer Event</name>
+    <events>
+        <variable constant="0" name="selectedArcher" sid="2035477526457126" static="0" type="number">0</variable>
+        <variable constant="0" name="archCount" sid="8174873228169056" static="0" type="number">0</variable>
+        <variable constant="0" name="tgtIndex" sid="9247675069367062" static="0" type="number">0</variable>
+        <event-block collapsed="1" sid="2433706279354769">
+            <conditions>
+                <condition id="0" name="On function" sid="9658400554695163" type="Function">
+                    <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="temp1" sid="634468295117579" static="0" type="text"></variable>
+                <variable constant="0" name="Temp2" sid="7806019140190745" static="0" type="text"></variable>
+                <variable constant="0" name="Rnum" sid="2875750175493734" static="0" type="number">0</variable>
+                <event-block sid="5717496868747">
+                    <conditions>
+                        <condition id="-10" name="For" sid="7597604606031665" type="System">
+                            <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                            <param id="1" name="Start index">0</param>
+                            <param id="2" name="End index">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4715050380739487" type="System">
+                            <param id="0" name="Variable">temp1</param>
+                            <param id="1" name="Value">archSet.At(0)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4694612819695515" type="System">
+                            <param id="0" name="Variable">Rnum</param>
+                            <param id="1" name="Value">random(1,4)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6631907411710464" type="System">
+                            <param id="0" name="Variable">Temp2</param>
+                            <param id="1" name="Value">archSet.At(Rnum)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="860802738149887" type="archSet">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">Temp2</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="3926491695312117" type="archSet">
+                            <param id="0" name="X">Rnum</param>
+                            <param id="1" name="Value">Temp1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="3629723196753054">
+            <conditions>
+                <condition id="0" name="On function" sid="5194967930394376" type="Function">
+                    <param id="0" name="Name">&quot;setTarget&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8817167368745047">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7770591574258032" type="tgtStand">
+                            <param id="0" name="Unique ID">44</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9012119648394242" type="QText">
+                            <param id="0" name="Text">QueSet3.At(tgtIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="6153110570654367" type="archSet">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6751032345608647" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="42775629363758" type="System">
+                            <param id="0" name="Variable">tgtIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="205834746589868">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9410415400488441" type="tgtStand">
+                            <param id="0" name="Unique ID">45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2721025527595518" type="QText">
+                            <param id="0" name="Text">QueSet3.At(tgtIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8214624379771313" type="archSet">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3475972150148441" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1056298919501253" type="System">
+                            <param id="0" name="Variable">tgtIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2412826160614337">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="489342467897203" type="tgtStand">
+                            <param id="0" name="Unique ID">46</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="851044255444164" type="QText">
+                            <param id="0" name="Text">QueSet3.At(tgtIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="5934222935828372" type="archSet">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="1466371071892544" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="510958173270165" type="System">
+                            <param id="0" name="Variable">tgtIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883082759890225">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4723398201092933" type="tgtStand">
+                            <param id="0" name="Unique ID">47</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3326176084189888" type="QText">
+                            <param id="0" name="Text">QueSet3.At(tgtIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8430186209354667" type="archSet">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2724503339743766" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3058973513877528" type="System">
+                            <param id="0" name="Variable">tgtIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1988075052143208">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="3404001231031671" type="tgtStand">
+                            <param id="0" name="Unique ID">48</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8188932796544861" type="QText">
+                            <param id="0" name="Text">QueSet3.At(tgtIndex,1)</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="941337284462422" type="archSet">
+                            <param id="0" name="X">4</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3280195200060463" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">queset3.At(tgtIndex,0)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="101069932117733" type="System">
+                            <param id="0" name="Variable">tgtIndex</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="2591551209006596" type="Function">
+                            <param id="0" name="Name">&quot;Shuffle&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="7732985205150818">
+            <conditions>
+                <condition id="0" name="On function" sid="1121876331796626" type="Function">
+                    <param id="0" name="Name">&quot;setArcher&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1542216750039659">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5766137331168267" type="Archer">
+                            <param id="0" name="Unique ID">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2214568761117214" type="AText">
+                            <param id="0" name="Text">archSet.At(archCount)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="6802009216153132" type="System">
+                            <param id="0" name="Variable">archCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8801139160876129">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="1331667782396901" type="Archer">
+                            <param id="0" name="Unique ID">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="1454950885427646" type="AText">
+                            <param id="0" name="Text">archSet.At(archCount)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5262006475265994" type="System">
+                            <param id="0" name="Variable">archCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2914013361773572">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="2994826002230409" type="Archer">
+                            <param id="0" name="Unique ID">41</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="358608332630461" type="AText">
+                            <param id="0" name="Text">archSet.At(archCount)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="3905912016207535" type="System">
+                            <param id="0" name="Variable">archCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4704379798493151">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="3707983552917883" type="Archer">
+                            <param id="0" name="Unique ID">42</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9216962658992618" type="AText">
+                            <param id="0" name="Text">archSet.At(archCount)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="347807744193826" type="System">
+                            <param id="0" name="Variable">archCount</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3920931611385861">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="882828326682482" type="Archer">
+                            <param id="0" name="Unique ID">43</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="5560187267771056" type="AText">
+                            <param id="0" name="Text">archSet.At(archCount)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9857504912607125" type="System">
+                            <param id="0" name="Variable">archCount</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="9411915866419426">
+            <conditions>
+                <condition id="0" name="On function" sid="3102669299484522" type="Function">
+                    <param id="0" name="Name">&quot;isChange&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7053069908419949">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3293336589698895" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">selectedArcher</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7888847780967892" type="Archer">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1703309025519532" type="System">
+                            <param id="0" name="Variable">selectedArcher</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block collapsed="1" sid="2062377911436881">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1918304568017664" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">tgtStand</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2265682309024126" type="System">
+                    <param id="0" name="Variable">selectedArcher</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="8999141385429108" type="tgtStand">
+                    <param id="0" name="Instance variable">isClickable</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="7300211619363264" type="Mouse">
+                    <param id="0" name="Cursor style">7</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5399909921922026">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="7156284685851648" type="Archer">
+                            <param id="0" name="Unique ID">selectedArcher</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="3727957142468513" type="Archer">
+                            <param id="0" name="Object">archArrow</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4211284101290088" type="archArrow">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Value">AText.Text</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4735834816320898" type="archArrow">
+                            <param id="0" name="Instance variable">Owner</param>
+                            <param id="1" name="Value">archer.UID</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="9527529500413791" type="archArrow">
+                            <param id="0" name="X">tgtStand.X</param>
+                            <param id="1" name="Y">tgtStand.Y+40</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8534691977621608">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6752304294471994" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TiledBackground4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5745076745320787" type="System">
+                    <param id="0" name="Variable">selectedArcher</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="5" name="Set frame" sid="4786029136711332" type="Archer">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6348405652031704">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3752711527929372" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="9803260009708425" type="Archer" />
+                <action id="2" name="Stop" sid="6412477333585565" type="tgtStand" />
+                <action id="5" name="Set frame" sid="997864502895718" type="Archer">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="8092303025370233" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7066615819494132" type="System">
+                    <param id="0" name="Variable">Stage</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Request URL" sid="644721462575002" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8414486356905512">
+            <conditions>
+                <condition id="0" name="On completed" sid="7348560631459264" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="x" sid="2124665091065377" static="0" type="number">0</variable>
+                <event-block sid="9261165609607494">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="3876010689214085" type="Queset3">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="1430995394145721" type="Queset3">
+                            <param id="0" name="X">Queset3.CurX</param>
+                            <param id="1" name="Y">Queset3.CurY</param>
+                            <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5849511789362251" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1264084148525503">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Call function" sid="5660896992488723" type="Function">
+                            <param id="0" name="Name">&quot;setTarget&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="4606077962953287" type="Function">
+                            <param id="0" name="Name">&quot;setArcher&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2887943132067287">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1260162379466174" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Archer</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="142006560398278" type="Archer">
+                    <param id="0" name="Instance variable">isClickable</param>
+                    <param id="1" name="Comparison">1</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="2325553112599022" type="Function">
+                    <param id="0" name="Name">&quot;isChange&quot;</param>
+                    <param id="1" name="Parameter {n}">archer.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="8291553612759471">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2599285170284959" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5412367444557211">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4053751602826783" type="Archer">
+                            <param id="0" name="Unique ID">selectedArcher</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="6828107887835055" type="Archer">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="Y co-ordinate">mouse.Y-30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="6428101241766326" type="Archer">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1296213567065933">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1768688578874998" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="7507375456947673" type="Archer">
+                            <param id="0" name="Unique ID">selectedArcher</param>
+                        </condition>
+                        <condition id="-2" name="Compare Y" sid="394023399784132" type="Archer">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Y co-ordinate">mouse.Y+30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1014984171978665" type="Archer">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8582932213938021">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4330153691732715" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="659556132861728" type="Archer">
+                            <param id="0" name="Unique ID">selectedArcher</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="7432014304410901" type="Archer">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1412438246185954">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="2176156863830177" type="Mouse">
+                            <param id="0" name="Object">tgtStand</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8579974495708167" type="tgtStand">
+                            <param id="0" name="Instance variable">isClickable</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9874776539425523" type="tgtStand">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6093248396681766">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1578083829809898" type="System" />
+                        <condition id="-7" name="Compare instance variable" sid="3093109832733352" type="tgtStand">
+                            <param id="0" name="Instance variable">isClickable</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="2887070129766257" type="tgtStand">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2416389243148893">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7760846145608549" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="8311686892296176" type="tgtStand">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164192594156513">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3508482120884718" type="Archer">
+                            <param id="0" name="Instance variable">isClickable</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="5264759733361315" type="Archer">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5214822209587282">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7710982545144782" type="tgtStand">
+                    <param id="0" name="Object">archArrow</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set cursor style" sid="3613924249170797" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8792580111870858">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3840437617086381" type="tgtStand">
+                            <param id="0" name="Instance variable">Meaning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">archArrow.Meaning</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="3662881470457015" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7660149219898427" type="Correct">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="3432896481977791" type="Correct" />
+                        <action id="-10" name="Set value" sid="8276956813299353" type="tgtStand">
+                            <param id="0" name="Instance variable">isClickable</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="7933044225034415" type="tgtStand">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="7131647832818229" type="System">
+                            <param id="0" name="Variable">Count</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8897796231962774">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6853345296009438" type="Archer">
+                                    <param id="0" name="Unique ID">archArrow.Owner</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4785543319915965" type="Archer">
+                                    <param id="0" name="Instance variable">isClickable</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4132632854199428" type="archArrow" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4911397096213456">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3484439242239813" type="System">
+                                    <param id="0" name="Variable">Count</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2742954557016614" type="Function">
+                                    <param id="0" name="Name">&quot;setTarget&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="5111547475588756" type="Function">
+                                    <param id="0" name="Name">&quot;setArcher&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="5" name="Set frame" sid="9284628357740913" type="Archer">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="429719573346794">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8541026405316194" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5152441751593271" type="Wrong">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="3142569231601757" type="Wrong" />
+                        <action id="-11" name="Subtract from" sid="8978044796669162" type="System">
+                            <param id="0" name="Variable">localScore</param>
+                            <param id="1" name="Value">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9374612846072564">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="5027044132862049" type="archArrow" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5118951859677608" type="archArrow" />
+            </actions>
+        </event-block>
+        <event-block sid="7889964917744539">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="1841977711122986" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5368415656524856" type="tgtStand">
+                    <param id="0" name="Instance variable">isClickable</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="5270495718112992" type="Archer">
+                    <param id="0" name="Instance variable">isClickable</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6225006179747883">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3750452820860317" type="System">
+                    <param id="0" name="Variable">Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="5423896472937357" type="System">
+                    <param id="0" name="Layout">Summary</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

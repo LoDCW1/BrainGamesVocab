@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Home Event</name>
+    <events>
+        <variable constant="0" name="UserID" sid="8213890341691978" static="0" type="number">0</variable>
+        <variable constant="0" name="password" sid="1636754951882261" static="0" type="text"></variable>
+        <variable constant="0" name="username" sid="5267299294427202" static="0" type="text"></variable>
+        <variable constant="0" name="usertype" sid="4105322429567808" static="0" type="text">user</variable>
+        <event-block sid="2184891924364074">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5512321480418434" type="registerbuttonhomepage" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4948409747445914" type="System">
+                    <param id="0" name="Layout">Register</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9661254007033812">
+            <conditions>
+                <condition id="1" name="On text changed" sid="9999741706284155" type="usernametextbox" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3481724943859672" type="System">
+                    <param id="0" name="Variable">username</param>
+                    <param id="1" name="Value">usernametextbox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7076981745848426">
+            <conditions>
+                <condition id="1" name="On text changed" sid="4214490715676697" type="passwordtextbox" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="9388849549851032" type="System">
+                    <param id="0" name="Variable">password</param>
+                    <param id="1" name="Value">passwordtextbox.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3512361652305765">
+            <conditions>
+                <condition id="1" name="On selection changed" sid="4561918234208128" type="usertypelist" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5711908999107242" type="System">
+                    <param id="0" name="Variable">usertype</param>
+                    <param id="1" name="Value">usertypelist.SelectedText</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="347274687419454">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6610684213333927" type="System">
+                    <param id="0" name="Variable">username</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="1373926716199483" type="System">
+                    <param id="0" name="Variable">password</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="9376621394589924" type="loginbutton">
+                    <param id="0" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9071884353419287">
+            <conditions>
+                <condition id="-22" name="Else" sid="3774432096909898" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="6036699416995065" type="loginbutton">
+                    <param id="0" name="Mode">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="393687146866573">
+            <conditions>
+                <condition id="0" name="On clicked" sid="9460660368680686" type="loginbutton" />
+            </conditions>
+            <actions>
+                <action id="0" name="Request URL" sid="5410136353275951" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                    <param id="1" name="URL">&quot;http://localhost/login.php?Username=&quot;&amp;username&amp;&quot;&amp;Password=&quot;&amp;password&amp;&quot;&amp;UserType=&quot;&amp;usertype</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6242560097929352">
+            <conditions>
+                <condition id="0" name="On completed" sid="1760108734953737" type="AJAX">
+                    <param id="0" name="Tag">&quot;Login&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7166497034772371" type="System">
+                    <param id="0" name="Variable">UserID</param>
+                    <param id="1" name="Value">AJAX.LastData</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2770530188803777">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7618102933964626" type="System">
+                            <param id="0" name="Variable">UserID</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6360755976749624" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8233830121839818" type="loginbutton" />
+                        <action id="5" name="Set read-only" sid="61150339038342" type="usernametextbox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="5" name="Set read-only" sid="1057534333248822" type="passwordtextbox">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="3" name="Set enabled" sid="9350509441698153" type="usertypelist">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="3214135195216903" type="System">
+                            <param id="0" name="Layout">Welcome</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7953015794437734">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4635099401409171" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6007953905129079" type="wronglogin">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
