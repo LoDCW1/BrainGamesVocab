@@ -207,13 +207,17 @@
                     <param id="0" name="Variable">Count</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="0" name="Request URL" sid="3980895412700443" type="AJAX">
+                <action disabled="1" id="0" name="Request URL" sid="3980895412700443" type="AJAX">
                     <param id="0" name="Tag">&quot;questionSet&quot;</param>
                     <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame1</param>
                 </action>
+                <action id="0" name="Call function" sid="1017161629923021" type="Function">
+                    <param id="0" name="Name">&quot;setPlatform&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="4056831846618337">
+        <event-block disabled="1" sid="4056831846618337">
             <conditions>
                 <condition id="0" name="On completed" sid="6246741985047777" type="AJAX">
                     <param id="0" name="Tag">&quot;questionSet&quot;</param>
@@ -222,7 +226,7 @@
             <actions />
             <sub-events>
                 <variable constant="0" name="x" sid="190033771189836" static="0" type="number">0</variable>
-                <event-block sid="6184238680217523">
+                <event-block disabled="1" sid="6184238680217523">
                     <conditions>
                         <condition id="3" name="For each element" sid="3146803795104294" type="QueSet2">
                             <param id="0" name="Axes">1</param>
@@ -240,10 +244,10 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1065451639781324">
+                <event-block disabled="1" sid="1065451639781324">
                     <conditions />
                     <actions>
-                        <action id="0" name="Call function" sid="7351910118462208" type="Function">
+                        <action disabled="1" id="0" name="Call function" sid="7351910118462208" type="Function">
                             <param id="0" name="Name">&quot;setPlatform&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>

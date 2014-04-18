@@ -23,46 +23,24 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Stop" sid="7704042320852202" type="CountdownSprite" />
-                <action id="5" name="Set frame" sid="6249778696780781" type="CountdownSprite">
-                    <param id="0" name="Frame number">0</param>
+                <action id="3" name="Set enabled" sid="9880566129692772" type="StartGame">
+                    <param id="0" name="Mode">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="716886769810879" type="CountdownSprite">
-                    <param id="0" name="Visibility">1</param>
+                <action id="-9" name="Set value" sid="6775585115013721" type="System">
+                    <param id="0" name="Variable">CategoryGame1</param>
+                    <param id="1" name="Value">CategoryListGame1.SelectedText</param>
                 </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="1439695660763858" type="CountdownSprite" />
-                <action id="-16" name="Wait" sid="9567086099456399" type="System">
-                    <param id="0" name="Seconds">1</param>
+                <action id="-9" name="Set value" sid="1196611485162585" type="System">
+                    <param id="0" name="Variable">CategoryGame2</param>
+                    <param id="1" name="Value">CategoryListGame2.SelectedText</param>
                 </action>
-                <action id="5" name="Set frame" sid="2443477220136181" type="CountdownSprite">
-                    <param id="0" name="Frame number">1</param>
+                <action id="-9" name="Set value" sid="4470707514925458" type="System">
+                    <param id="0" name="Variable">CategoryGame3</param>
+                    <param id="1" name="Value">CategoryListGame3.SelectedText</param>
                 </action>
-                <action id="-15" name="Set visible" sid="7032952329674231" type="CountdownSprite">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="3856879605662719" type="CountdownSprite" />
-                <action id="-16" name="Wait" sid="6672294086603587" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="1257344039972489" type="CountdownSprite">
-                    <param id="0" name="Frame number">2</param>
-                </action>
-                <action id="-15" name="Set visible" sid="5282934937500413" type="CountdownSprite">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="7407692776466167" type="CountdownSprite" />
-                <action id="-16" name="Wait" sid="8320327503281075" type="System">
-                    <param id="0" name="Seconds">1</param>
-                </action>
-                <action id="5" name="Set frame" sid="8776925838370349" type="CountdownSprite">
-                    <param id="0" name="Frame number">3</param>
-                </action>
-                <action id="-15" name="Set visible" sid="5938211969566209" type="CountdownSprite">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action behavior="Fade" id="0" name="Restart fade" sid="7017216690878648" type="CountdownSprite" />
-                <action id="-2" name="Go to layout" sid="2639798820581047" type="System">
-                    <param id="0" name="Layout">Landing</param>
+                <action id="-12" name="Set group active" sid="4603747651266935" type="System">
+                    <param id="0" name="Group name">&quot;loadWord&quot;</param>
+                    <param id="1" name="State">1</param>
                 </action>
             </actions>
         </event-block>
@@ -189,22 +167,224 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3000713773799235">
+        <event-group description="" inactive="1" sid="512997668508196" title="loadWord">
+            <sub-events>
+                <event-block sid="7731230975860034">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Request URL" sid="9600169798829821" type="AJAX">
+                            <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                            <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9764838781391451">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="1164425589731631" type="AJAX">
+                            <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="x" sid="2652356105983532" static="0" type="number">0</variable>
+                        <event-block sid="2752894109541676">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="1123462505927625" type="QueSet2">
+                                    <param id="0" name="Axes">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="1103029504669719" type="QueSet2">
+                                    <param id="0" name="X">QueSet2.CurX</param>
+                                    <param id="1" name="Y">QueSet2.CurY</param>
+                                    <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="112806182545612" type="System">
+                                    <param id="0" name="Variable">x</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3447259218636635">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Request URL" sid="3067213837795151" type="AJAX">
+                                    <param id="0" name="Tag">&quot;questionSet2&quot;</param>
+                                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9417396903586455">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="9226978293081798" type="AJAX">
+                            <param id="0" name="Tag">&quot;questionSet2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="x" sid="1645622610581744" static="0" type="number">0</variable>
+                        <event-block sid="9905920954708041">
+                            <conditions>
+                                <condition id="3" name="For each element" sid="5041789591369245" type="Queset3">
+                                    <param id="0" name="Axes">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="9983435892586922" type="Queset3">
+                                    <param id="0" name="X">Queset3.CurX</param>
+                                    <param id="1" name="Y">Queset3.CurY</param>
+                                    <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="7835533387273842" type="System">
+                                    <param id="0" name="Variable">x</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2323865216669915">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Request URL" sid="3751030615432377" type="AJAX">
+                                    <param id="0" name="Tag">&quot;questionSet3&quot;</param>
+                                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame3</param>
+                                </action>
+                                <action id="-12" name="Set group active" sid="4735709830403576" type="System">
+                                    <param id="0" name="Group name">&quot;loadWord&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="1423384851607768">
             <conditions>
-                <condition id="0" name="On clicked" sid="1888652604007438" type="StartGame" />
+                <condition id="0" name="On completed" sid="3670043331381009" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet3&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="x" sid="5309808260629914" static="0" type="number">0</variable>
+                <event-block sid="6311588572191429">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="113125049426928">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="2370832871570408" type="QueSet4">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="1178005894835194" type="QueSet4">
+                            <param id="0" name="X">QueSet4.CurX</param>
+                            <param id="1" name="Y">QueSet4.CurY</param>
+                            <param id="2" name="Value">tokenat(AJAX.LastData,x, &quot;|&quot;)</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="4174315175565134" type="System">
+                            <param id="0" name="Variable">x</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1263330224531928">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="9586841401445469" type="wordQueue">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="3498684552969156" type="wordQueue">
+                            <param id="0" name="X">wordQueue.CurX</param>
+                            <param id="1" name="Value">QueSet4.At(wordQueue.CurX,0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6400290485387812">
+                    <conditions />
+                    <actions>
+                        <action id="2" name="Stop" sid="6868905432216917" type="CountdownSprite" />
+                        <action id="5" name="Set frame" sid="7933715325555174" type="CountdownSprite">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="546666212894343" type="CountdownSprite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="308421430244811" type="CountdownSprite" />
+                        <action id="-16" name="Wait" sid="3961854182931435" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="815925731523927" type="CountdownSprite">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2942447156393491" type="CountdownSprite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="4341991609349471" type="CountdownSprite" />
+                        <action id="-16" name="Wait" sid="7130985231613332" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2245333210732468" type="CountdownSprite">
+                            <param id="0" name="Frame number">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7042374995896044" type="CountdownSprite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="1604795855663022" type="CountdownSprite" />
+                        <action id="-16" name="Wait" sid="4430186171770015" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="8388071156051037" type="CountdownSprite">
+                            <param id="0" name="Frame number">3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6835806712468469" type="CountdownSprite">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action behavior="Fade" id="0" name="Restart fade" sid="164506602787177" type="CountdownSprite" />
+                        <action id="-2" name="Go to layout" sid="4085341297301821" type="System">
+                            <param id="0" name="Layout">Landing</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6818742386893577">
+            <conditions>
+                <condition id="1" name="On error" sid="6632670199255015" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet&quot;</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="2923339359614482" type="System">
-                    <param id="0" name="Variable">CategoryGame1</param>
-                    <param id="1" name="Value">CategoryListGame1.SelectedText</param>
+                <action id="3" name="Set enabled" sid="6396419464072943" type="StartGame">
+                    <param id="0" name="Mode">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="3044775716714273" type="System">
-                    <param id="0" name="Variable">CategoryGame2</param>
-                    <param id="1" name="Value">CategoryListGame2.SelectedText</param>
+            </actions>
+        </event-block>
+        <event-block sid="777665579936751">
+            <conditions>
+                <condition id="1" name="On error" sid="9940816476004168" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet2&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="3391147350662472" type="StartGame">
+                    <param id="0" name="Mode">1</param>
                 </action>
-                <action id="-9" name="Set value" sid="3003188269242997" type="System">
-                    <param id="0" name="Variable">CategoryGame3</param>
-                    <param id="1" name="Value">CategoryListGame3.SelectedText</param>
+            </actions>
+        </event-block>
+        <event-block sid="2754675781183694">
+            <conditions>
+                <condition id="1" name="On error" sid="6237866592929819" type="AJAX">
+                    <param id="0" name="Tag">&quot;questionSet3&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="3" name="Set enabled" sid="6700548449824893" type="StartGame">
+                    <param id="0" name="Mode">1</param>
                 </action>
             </actions>
         </event-block>

@@ -390,13 +390,21 @@
                     <param id="0" name="Variable">Stage</param>
                     <param id="1" name="Value">2</param>
                 </action>
-                <action id="0" name="Request URL" sid="644721462575002" type="AJAX">
+                <action disabled="1" id="0" name="Request URL" sid="644721462575002" type="AJAX">
                     <param id="0" name="Tag">&quot;questionSet&quot;</param>
                     <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame2</param>
                 </action>
+                <action id="0" name="Call function" sid="6040195991700605" type="Function">
+                    <param id="0" name="Name">&quot;setTarget&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="8604085766448947" type="Function">
+                    <param id="0" name="Name">&quot;setArcher&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="8414486356905512">
+        <event-block disabled="1" sid="8414486356905512">
             <conditions>
                 <condition id="0" name="On completed" sid="7348560631459264" type="AJAX">
                     <param id="0" name="Tag">&quot;questionSet&quot;</param>
@@ -405,7 +413,7 @@
             <actions />
             <sub-events>
                 <variable constant="0" name="x" sid="2124665091065377" static="0" type="number">0</variable>
-                <event-block sid="9261165609607494">
+                <event-block disabled="1" sid="9261165609607494">
                     <conditions>
                         <condition id="3" name="For each element" sid="3876010689214085" type="Queset3">
                             <param id="0" name="Axes">1</param>
@@ -423,7 +431,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1264084148525503">
+                <event-block disabled="1" sid="1264084148525503">
                     <conditions />
                     <actions>
                         <action id="0" name="Call function" sid="5660896992488723" type="Function">

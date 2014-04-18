@@ -915,6 +915,8 @@
         <layout>Register.xml</layout>
         <layout>Addword.xml</layout>
         <layout>Final.xml</layout>
+        <layout>landingIntro.xml</layout>
+        <layout>archerIntro.xml</layout>
     </layout-folder>
     <event-folder expanded="1">
         <event-sheet>Marksman Event.xml</event-sheet>
@@ -928,6 +930,7 @@
         <event-sheet>Register Event.xml</event-sheet>
         <event-sheet>Addword Event.xml</event-sheet>
         <event-sheet>Final Event.xml</event-sheet>
+        <event-sheet>Intro Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="5" />
