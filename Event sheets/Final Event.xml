@@ -55,7 +55,7 @@
             <actions>
                 <action id="2" name="Post to URL" sid="1904310172435066" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame1&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame1&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(0)</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame1&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(0)</param>
                     <param id="2" name="Data">&quot;&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="3898097066091144" type="System">
@@ -77,7 +77,7 @@
             <actions>
                 <action id="0" name="Request URL" sid="270703214255326" type="AJAX">
                     <param id="0" name="Tag">&quot;GetScores&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/getscores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;PicklistFinal.SelectedText</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;getscores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;PicklistFinal.SelectedText</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9701383349393717" type="Performancetxt">
                     <param id="0" name="Visibility">1</param>
@@ -128,7 +128,7 @@
             <actions>
                 <action id="2" name="Post to URL" sid="8380677253983358" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame2&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame2&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(1)</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame2&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(1)</param>
                     <param id="2" name="Data">&quot;&quot;</param>
                 </action>
             </actions>
@@ -142,12 +142,12 @@
             <actions>
                 <action id="2" name="Post to URL" sid="4456285236760446" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame3&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame3&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(2)</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame3&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(2)</param>
                     <param id="2" name="Data">&quot;&quot;</param>
                 </action>
                 <action id="0" name="Request URL" sid="8258317196927486" type="AJAX">
                     <param id="0" name="Tag">&quot;QueryCategoryFinalPage&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/querycategoryforfinal.php&quot;</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;querycategoryforfinal.php&quot;</param>
                 </action>
             </actions>
         </event-block>

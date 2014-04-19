@@ -118,7 +118,7 @@
             <actions>
                 <action id="0" name="Request URL" sid="1339546287355981" type="AJAX">
                     <param id="0" name="Tag">&quot;QueryCategory&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/querycategory.php&quot;</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;querycategory.php&quot;</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="3485238957125942" type="System">
                     <param id="0" name="Layer">2</param>
@@ -186,7 +186,7 @@
                     <actions>
                         <action id="0" name="Request URL" sid="9600169798829821" type="AJAX">
                             <param id="0" name="Tag">&quot;questionSet&quot;</param>
-                            <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame1</param>
+                            <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -222,7 +222,7 @@
                             <actions>
                                 <action id="0" name="Request URL" sid="3067213837795151" type="AJAX">
                                     <param id="0" name="Tag">&quot;questionSet2&quot;</param>
-                                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame2</param>
+                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -260,7 +260,7 @@
                             <actions>
                                 <action id="0" name="Request URL" sid="3751030615432377" type="AJAX">
                                     <param id="0" name="Tag">&quot;questionSet3&quot;</param>
-                                    <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame3</param>
+                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame3</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="4735709830403576" type="System">
                                     <param id="0" name="Group name">&quot;loadWord&quot;</param>

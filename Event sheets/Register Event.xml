@@ -52,7 +52,7 @@
                     <actions>
                         <action id="2" name="Post to URL" sid="5762866262378197" type="AJAX">
                             <param id="0" name="Tag">&quot;PostRegister&quot;</param>
-                            <param id="1" name="URL">&quot;http://localhost/register.php?Fname=&quot;&amp; registerfirstnamebox.Text&amp;&quot;&amp;Lname=&quot;&amp; registerlastnamebox.Text &amp;&quot;&amp;Username=&quot;&amp;registerusernamebox.Text&amp;&quot;&amp;Password=&quot;&amp;registerpasswordbox.Text&amp;&quot;&amp;UserType=&quot;&amp;registerlist.SelectedText</param>
+                            <param id="1" name="URL">HostURL&amp;&quot;register.php?Fname=&quot;&amp; registerfirstnamebox.Text&amp;&quot;&amp;Lname=&quot;&amp; registerlastnamebox.Text &amp;&quot;&amp;Username=&quot;&amp;registerusernamebox.Text&amp;&quot;&amp;Password=&quot;&amp;registerpasswordbox.Text&amp;&quot;&amp;UserType=&quot;&amp;registerlist.SelectedText</param>
                             <param id="2" name="Data">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="5520165521825397" type="System">

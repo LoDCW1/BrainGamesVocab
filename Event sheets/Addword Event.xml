@@ -148,7 +148,7 @@
             </conditions>
             <actions>
                 <action id="8" name="Open URL in new window" sid="3131424113485965" type="br">
-                    <param id="0" name="URL">&quot;http://localhost/show.php&quot;</param>
+                    <param id="0" name="URL">HostURL&amp;&quot;show.php&quot;</param>
                     <param id="1" name="Tag">&quot;NewWindow&quot;</param>
                 </action>
             </actions>
@@ -178,7 +178,7 @@
                 </action>
                 <action id="0" name="Request URL" sid="1460888998308044" type="AJAX">
                     <param id="0" name="Tag">&quot;QueryCategoryforAddword&quot;</param>
-                    <param id="1" name="URL">&quot;http://localhost/querycategory.php&quot;</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;querycategory.php&quot;</param>
                 </action>
             </actions>
         </event-block>
