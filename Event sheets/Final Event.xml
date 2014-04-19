@@ -45,6 +45,15 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="4142881963342263">
+                    <conditions />
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="3420119343287934" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <comment>Needs to be fixed. No &quot;Score&quot; variable exists.</comment>
@@ -75,6 +84,10 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-4" name="Set layer visible" sid="3417194094943648" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="0" name="Request URL" sid="270703214255326" type="AJAX">
                     <param id="0" name="Tag">&quot;GetScores&quot;</param>
                     <param id="1" name="URL">HostURL&amp;&quot;getscores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;PicklistFinal.SelectedText</param>
@@ -90,7 +103,12 @@
                     <param id="0" name="Tag">&quot;GetScores&quot;</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="-4" name="Set layer visible" sid="6165815330428136" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="8695676864803752">
                     <conditions>

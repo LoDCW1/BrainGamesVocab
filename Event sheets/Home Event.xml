@@ -85,6 +85,10 @@
                 <condition id="0" name="On clicked" sid="9460660368680686" type="loginbutton" />
             </conditions>
             <actions>
+                <action id="-4" name="Set layer visible" sid="473328173360765" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
                 <action id="0" name="Request URL" sid="5410136353275951" type="AJAX">
                     <param id="0" name="Tag">&quot;Login&quot;</param>
                     <param id="1" name="URL">HostURL&amp;&quot;login.php?Username=&quot;&amp;username&amp;&quot;&amp;Password=&quot;&amp;password&amp;&quot;&amp;UserType=&quot;&amp;usertype</param>
@@ -136,6 +140,10 @@
                     <actions>
                         <action id="-15" name="Set visible" sid="6007953905129079" type="wronglogin">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="2205769169481741" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>

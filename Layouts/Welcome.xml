@@ -384,7 +384,7 @@
         </layer>
         <layer name="Load" sid="9721000644762582">
             <initially-visible>0</initially-visible>
-            <background-color>0,0,0</background-color>
+            <background-color>255,255,255</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>
@@ -403,7 +403,7 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <blend-mode>1</blend-mode>
+                    <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>315</x>
