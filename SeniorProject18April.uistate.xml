@@ -14,8 +14,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout>Welcome</layout>
         <layout>Final</layout>
         <event-sheet>Addword Event</event-sheet>
-        <event-sheet>Final Event</event-sheet>
-        <event-sheet active="1">Home Event</event-sheet>
+        <event-sheet active="1">Final Event</event-sheet>
+        <event-sheet>Home Event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
