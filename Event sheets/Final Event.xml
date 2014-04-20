@@ -178,5 +178,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="6623473137123116">
+            <conditions>
+                <condition id="0" name="On clicked" sid="7994278061823475" type="viewstatsbutton" />
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="7427804771394174" type="br">
+                    <param id="0" name="URL">HostURL&amp;&quot;displayscores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;PicklistFinal.SelectedText</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

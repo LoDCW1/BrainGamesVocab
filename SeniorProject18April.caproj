@@ -1028,6 +1028,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="viewstatsbutton" sid="4094283613041378">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
