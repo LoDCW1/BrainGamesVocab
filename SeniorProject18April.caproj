@@ -786,6 +786,9 @@
         </object-type>
         <object-type name="StartGame" sid="7141652590885436">
             <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="No" sid="110545429913877" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="Gotoaddword" sid="2898264567865952">
             <plugin id="Button" />
@@ -1029,6 +1032,21 @@
             </animation-folder>
         </object-type>
         <object-type name="viewstatsbutton" sid="4094283613041378">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="StartGame2" sid="8687372279760586">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Instruction" sid="3338847161844492">
+            <plugin id="Button" />
+            <instance-variables>
+                <instance-variable name="game" sid="2431003733064439" type="number" />
+            </instance-variables>
+        </object-type>
+        <object-type name="Button" sid="7885455419266544">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="PlayAgain" sid="4629336177371713">
             <plugin id="Button" />
         </object-type>
     </object-folder>

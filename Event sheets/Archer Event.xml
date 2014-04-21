@@ -50,7 +50,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block collapsed="1" sid="3629723196753054">
+        <event-block sid="3629723196753054">
             <conditions>
                 <condition id="0" name="On function" sid="5194967930394376" type="Function">
                     <param id="0" name="Name">&quot;setTarget&quot;</param>
@@ -709,6 +709,18 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="2445466046913556" type="System">
+                    <param id="0" name="Variable">tgtIndex</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="7099217032552336" type="System">
+                    <param id="0" name="Variable">archCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="700539751285738" type="System">
+                    <param id="0" name="Variable">selectedArcher</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="5423896472937357" type="System">
                     <param id="0" name="Layout">Summary</param>
                 </action>

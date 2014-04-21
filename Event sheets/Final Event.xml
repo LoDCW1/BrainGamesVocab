@@ -189,5 +189,15 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="3239390895956902">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6297119023657601" type="PlayAgain" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3468434621710021" type="System">
+                    <param id="0" name="Layout">Welcome</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

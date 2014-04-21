@@ -13,11 +13,11 @@
                     <param id="0" name="Text to compare">&quot;&quot;</param>
                     <param id="1" name="Case sensitivity">0</param>
                 </condition>
-                <condition id="4" inverted="1" name="Compare selected item text" sid="9030788461219445" type="CategoryListGame2">
+                <condition disabled="1" id="4" inverted="1" name="Compare selected item text" sid="9030788461219445" type="CategoryListGame2">
                     <param id="0" name="Text to compare">&quot;&quot;</param>
                     <param id="1" name="Case sensitivity">0</param>
                 </condition>
-                <condition id="4" inverted="1" name="Compare selected item text" sid="7526366095069609" type="CategoryListGame3">
+                <condition disabled="1" id="4" inverted="1" name="Compare selected item text" sid="7526366095069609" type="CategoryListGame3">
                     <param id="0" name="Text to compare">&quot;&quot;</param>
                     <param id="1" name="Case sensitivity">0</param>
                 </condition>
@@ -25,6 +25,10 @@
             <actions>
                 <action id="3" name="Set enabled" sid="9880566129692772" type="StartGame">
                     <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="2804031213835163" type="System">
+                    <param id="0" name="Variable">Stage</param>
+                    <param id="1" name="Value">StartGame.No</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="5729114979346411" type="System">
                     <param id="0" name="Layer">2</param>
@@ -60,11 +64,11 @@
                             <param id="0" name="Text to compare">&quot;&quot;</param>
                             <param id="1" name="Case sensitivity">0</param>
                         </condition>
-                        <condition id="4" name="Compare selected item text" sid="7010422230131657" type="CategoryListGame2">
+                        <condition disabled="1" id="4" name="Compare selected item text" sid="7010422230131657" type="CategoryListGame2">
                             <param id="0" name="Text to compare">&quot;&quot;</param>
                             <param id="1" name="Case sensitivity">0</param>
                         </condition>
-                        <condition id="4" name="Compare selected item text" sid="5371990426274695" type="CategoryListGame3">
+                        <condition disabled="1" id="4" name="Compare selected item text" sid="5371990426274695" type="CategoryListGame3">
                             <param id="0" name="Text to compare">&quot;&quot;</param>
                             <param id="1" name="Case sensitivity">0</param>
                         </condition>
@@ -169,10 +173,10 @@
                         <action id="7" name="Add item" sid="758352102081957" type="CategoryListGame1">
                             <param id="0" name="Text">ArrayCategory.At(loopindex)</param>
                         </action>
-                        <action id="7" name="Add item" sid="3434813540475512" type="CategoryListGame2">
+                        <action disabled="1" id="7" name="Add item" sid="3434813540475512" type="CategoryListGame2">
                             <param id="0" name="Text">ArrayCategory.At(loopindex)</param>
                         </action>
-                        <action id="7" name="Add item" sid="216980331945231" type="CategoryListGame3">
+                        <action disabled="1" id="7" name="Add item" sid="216980331945231" type="CategoryListGame3">
                             <param id="0" name="Text">ArrayCategory.At(loopindex)</param>
                         </action>
                     </actions>
@@ -222,7 +226,7 @@
                             <actions>
                                 <action id="0" name="Request URL" sid="3067213837795151" type="AJAX">
                                     <param id="0" name="Tag">&quot;questionSet2&quot;</param>
-                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame2</param>
+                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -260,7 +264,7 @@
                             <actions>
                                 <action id="0" name="Request URL" sid="3751030615432377" type="AJAX">
                                     <param id="0" name="Tag">&quot;questionSet3&quot;</param>
-                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame3</param>
+                                    <param id="1" name="URL">HostURL&amp;&quot;setVocab.php?Category=&quot;&amp;CategoryGame1</param>
                                 </action>
                                 <action id="-12" name="Set group active" sid="4735709830403576" type="System">
                                     <param id="0" name="Group name">&quot;loadWord&quot;</param>
@@ -272,6 +276,7 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <comment>Use to be On questionSet3 completed</comment>
         <event-block sid="1423384851607768">
             <conditions>
                 <condition id="0" name="On completed" sid="3670043331381009" type="AJAX">
@@ -361,10 +366,48 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="164506602787177" type="CountdownSprite" />
-                        <action id="-2" name="Go to layout" sid="4085341297301821" type="System">
-                            <param id="0" name="Layout">Landing</param>
-                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1356649917372943">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9044410637986599" type="System">
+                                    <param id="0" name="Variable">Stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="4085341297301821" type="System">
+                                    <param id="0" name="Layout">Landing</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9899411627671586">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8829755633685949" type="System" />
+                                <condition id="-14" name="Compare variable" sid="3040351396157698" type="System">
+                                    <param id="0" name="Variable">Stage</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="6588165940827921" type="System">
+                                    <param id="0" name="Layout">Archer</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8226877255411024">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="3864879078154602" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="4052972953598905" type="System">
+                                    <param id="0" name="Layout">Anagram</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
