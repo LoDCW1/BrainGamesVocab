@@ -616,6 +616,10 @@
                     <param id="0" name="Variable">letterLim</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="2" name="Set at X" sid="7373481616866131" type="scoreSet">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Value">localScore</param>
+                </action>
                 <action id="-2" name="Go to layout" sid="6629428298663905" type="System">
                     <param id="0" name="Layout">Summary</param>
                 </action>

@@ -11,15 +11,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout>Home</layout>
-        <layout active="1">Welcome</layout>
+        <layout>Welcome</layout>
         <layout>Final</layout>
+        <layout>Landing</layout>
+        <layout>Archer</layout>
         <event-sheet>Addword Event</event-sheet>
         <event-sheet>Final Event</event-sheet>
         <event-sheet>Home Event</event-sheet>
         <event-sheet>Welcome Event</event-sheet>
         <event-sheet>Landing Event</event-sheet>
         <event-sheet>Archer Event</event-sheet>
-        <event-sheet>Anagram Event</event-sheet>
+        <event-sheet active="1">Anagram Event</event-sheet>
         <event-sheet>Summary Event</event-sheet>
     </open-tabs>
     <properties>

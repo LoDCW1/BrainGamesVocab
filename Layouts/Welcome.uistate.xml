@@ -5,10 +5,10 @@ It is entirely optional and the project will load without it.  If you are placin
 you probably do not want to add any .uistate.xml files to the repository.-->
     <camera>
         <position-x>302.811</position-x>
-        <position-y>333.798</position-y>
-        <position-z>82.6446</position-z>
+        <position-y>330.901</position-y>
+        <position-z>75.1315</position-z>
         <lookat-x>302.811</lookat-x>
-        <lookat-y>333.798</lookat-y>
+        <lookat-y>330.901</lookat-y>
         <lookat-z>0</lookat-z>
     </camera>
     <snap-to-grid>0</snap-to-grid>
@@ -23,13 +23,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <property expanded="1" name="Margins" />
         <property expanded="1" name="Effects" />
     </properties>
-    <active-layer name="htAnagram" />
+    <active-layer name="Main" />
     <layers>
         <layer locked="1" name="BG" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="Main" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="Load" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="htLanding" parallax-in-editor="0" visible="1" />
-        <layer locked="1" name="htArcher" parallax-in-editor="0" visible="1" />
-        <layer locked="0" name="htAnagram" parallax-in-editor="0" visible="1" />
+        <layer locked="0" name="Main" parallax-in-editor="0" visible="1" />
+        <layer locked="1" name="Load" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="htLanding" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="htArcher" parallax-in-editor="0" visible="0" />
+        <layer locked="1" name="htAnagram" parallax-in-editor="0" visible="0" />
     </layers>
 </c2uistate>

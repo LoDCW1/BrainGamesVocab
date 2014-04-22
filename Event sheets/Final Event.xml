@@ -153,14 +153,18 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Post to URL" sid="8380677253983358" type="AJAX">
+                <action disabled="1" id="2" name="Post to URL" sid="8380677253983358" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame2&quot;</param>
                     <param id="1" name="URL">HostURL&amp;&quot;savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame2&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(1)</param>
                     <param id="2" name="Data">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Request URL" sid="7811083986712062" type="AJAX">
+                    <param id="0" name="Tag">&quot;QueryCategoryFinalPage&quot;</param>
+                    <param id="1" name="URL">HostURL&amp;&quot;querycategoryforfinal.php&quot;</param>
+                </action>
             </actions>
         </event-block>
-        <event-block sid="3662354874973933">
+        <event-block disabled="1" sid="3662354874973933">
             <conditions>
                 <condition id="0" name="On completed" sid="6453360087048043" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame2&quot;</param>

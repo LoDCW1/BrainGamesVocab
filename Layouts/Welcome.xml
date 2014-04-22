@@ -88,6 +88,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="thumb2" uid="166">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>325.600830078</x>
+                        <y>290.630218506</y>
+                        <z>0</z>
+                        <width>165.182434082</width>
+                        <height>103.751586914</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503401339</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Instruction" uid="114">
                     <properties>
                         <type>Button</type>
@@ -222,7 +244,7 @@
                 </instance>
                 <instance type="wrongstart" uid="153">
                     <properties>
-                        <text>Select all categories</text>
+                        <text>Select a category</text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Arial,-16</font>
                         <color>255,0,0</color>
@@ -235,8 +257,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>239</x>
-                        <y>179</y>
+                        <x>251.772369385</x>
+                        <y>178.998855591</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -386,6 +408,50 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="thumb1" uid="165">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>114.795043945</x>
+                        <y>290.937957764</y>
+                        <z>0</z>
+                        <width>140.94241333</width>
+                        <height>112.421600342</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.503496528</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite" uid="167">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>532.316162109</x>
+                        <y>293.339141846</y>
+                        <z>0</z>
+                        <width>152.039474487</width>
+                        <height>109.45841217</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500823736</hotspotX>
+                        <hotspotY>0.501144171</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>

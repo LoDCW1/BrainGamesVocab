@@ -1080,6 +1080,30 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="thumb1" sid="6037266816492061">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6254561729823972" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503497" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="thumb2" sid="8891816639476903">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5087922512185905" speed="5">
+                    <frame duration="1" hotspotX="0.503401" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="9025016645460079">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4439627026387337" speed="5">
+                    <frame duration="1" hotspotX="0.500824" hotspotY="0.501144" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">

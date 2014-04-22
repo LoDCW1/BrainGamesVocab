@@ -351,6 +351,10 @@
                                     <param id="0" name="Variable">totalScore</param>
                                     <param id="1" name="Value">localScore</param>
                                 </action>
+                                <action id="2" name="Set at X" sid="1771001595368134" type="scoreSet">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Value">localScore</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="3788115464819413" type="System">
                                     <param id="0" name="Variable">shipTextIndx</param>
                                     <param id="1" name="Value">0</param>
