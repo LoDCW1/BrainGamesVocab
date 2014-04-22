@@ -27,6 +27,30 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Gotoaddword" uid="106">
+                    <properties>
+                        <type>Button</type>
+                        <text>Add Words</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>Yes</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>502</x>
+                        <y>69</y>
+                        <z>0</z>
+                        <width>130</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
                 <instance type="BlackboardBG" uid="147">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -110,30 +134,6 @@
                     <world>
                         <x>51.579360962</x>
                         <y>373.234436035</y>
-                        <z>0</z>
-                        <width>130</width>
-                        <height>25</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                    </world>
-                </instance>
-                <instance type="Gotoaddword" uid="106">
-                    <properties>
-                        <type>Button</type>
-                        <text>Add Words</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>Yes</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>502</x>
-                        <y>69</y>
                         <z>0</z>
                         <width>130</width>
                         <height>25</height>
@@ -431,9 +431,9 @@
             <effects />
         </layer>
         <layer name="htLanding" sid="8384635099782868">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -443,13 +443,56 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="HowtoLand" uid="159">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1.008392334</x>
+                        <y>0.860443115</y>
+                        <z>0</z>
+                        <width>646</width>
+                        <height>480.594787598</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="return" uid="160">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>86.184455872</x>
+                        <y>426.269775391</y>
+                        <z>0</z>
+                        <width>68.490959167</width>
+                        <height>69.021896362</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503875971</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="htArcher" sid="5956987546524603">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -459,13 +502,56 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="TiledBackground8" uid="161">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1.208557129</x>
+                        <y>1.392471313</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="return" uid="162">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>82.00340271</x>
+                        <y>436.278198242</y>
+                        <z>0</z>
+                        <width>68.490959167</width>
+                        <height>69.021896362</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503875971</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="htAnagram" sid="4233675453722019">
-            <initially-visible>1</initially-visible>
+            <initially-visible>0</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
+            <transparent>0</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -475,7 +561,50 @@
             <force-own-texture>0</force-own-texture>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="TiledBackground9" uid="163">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0.398635864</x>
+                        <y>0.219425201</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="return" uid="164">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>38.760986328</x>
+                        <y>442.890350342</y>
+                        <z>0</z>
+                        <width>68.490959167</width>
+                        <height>69.021896362</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503875971</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
     </layers>

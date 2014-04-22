@@ -447,5 +447,68 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="8854368107343999">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9691904601715236" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">return</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="4493688473854145" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="1610417040655838" type="System">
+                    <param id="0" name="Layer">4</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-4" name="Set layer visible" sid="3315668589940578" type="System">
+                    <param id="0" name="Layer">5</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="1982801980599698" type="StartGame">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="2815955075601903" type="Instruction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="1845039256851923" type="CategoryListGame1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914063314483152">
+            <conditions>
+                <condition id="0" name="On clicked" sid="2053171329473335" type="Instruction" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="9059475346083988" type="System">
+                    <param id="0" name="Layer">Instruction.game</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="2" name="Set visible" sid="1290344206487465" type="StartGame">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="2" name="Set visible" sid="3648683664876007" type="CategoryListGame1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6833394456234926">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="9323461162967913" type="System">
+                            <param id="0" name="Object">Instruction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set visible" sid="2995177427502151" type="Instruction">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

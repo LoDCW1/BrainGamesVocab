@@ -1049,6 +1049,37 @@
         <object-type name="PlayAgain" sid="4629336177371713">
             <plugin id="Button" />
         </object-type>
+        <object-type name="HowtoLand" sid="3343678681144775">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="return" sid="2072521705390949">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1902056581638748" speed="5">
+                    <frame duration="1" hotspotX="0.503876" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.139535" y="0.138462" />
+                            <point x="0.496124" y="0.00769231" />
+                            <point x="0.852713" y="0.146154" />
+                            <point x="0.992248" y="0.5" />
+                            <point x="0.852713" y="0.853846" />
+                            <point x="0.496124" y="0.992308" />
+                            <point x="0.139535" y="0.861538" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground8" sid="8995364123840262">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground9" sid="5019473745702571">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
