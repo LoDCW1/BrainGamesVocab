@@ -8,10 +8,11 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>yiir6b1znjwf</unique-id>
-    <saved-with-version>16300</saved-with-version>
+    <saved-with-version>16800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
@@ -57,7 +58,7 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder expanded="1">
+    <object-folder expanded="0">
         <object-type name="TiledBackground" sid="7120399224604637">
             <plugin id="TiledBg" />
             <texture />
@@ -1104,6 +1105,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Audio" sid="6215479627703394">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -1147,9 +1151,48 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="168">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+                <speed-of-sound>5000</speed-of-sound>
+                <doppler-factor>1</doppler-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder expanded="1" />
-    <music-folder expanded="1" />
+    <sounds-folder expanded="1">
+        <file name="correct.m4a" />
+        <file name="correct.ogg" />
+        <file name="countDown.m4a" />
+        <file name="countDown.ogg" />
+        <file name="Explosion 5.m4a" />
+        <file name="Explosion 5.ogg" />
+        <file name="miss.m4a" />
+        <file name="miss.ogg" />
+        <file name="Summary.m4a" />
+        <file name="Summary.ogg" />
+        <file name="ToyChime1.m4a" />
+        <file name="ToyChime1.ogg" />
+        <file name="wrong.m4a" />
+        <file name="wrong.ogg" />
+    </sounds-folder>
+    <music-folder expanded="1">
+        <file name="Home.m4a" />
+        <file name="Home.ogg" />
+        <file name="Anagram - 4.m4a" />
+        <file name="Anagram - 4.ogg" />
+        <file name="Archer.m4a" />
+        <file name="Archer.ogg" />
+        <file name="Landing - 3.m4a" />
+        <file name="Landing - 3.ogg" />
+    </music-folder>
     <files-folder expanded="1">
         <file-folder expanded="0" name="Icons">
             <file name="icon-16.png" />

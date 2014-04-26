@@ -17,6 +17,13 @@
                     <param id="0" name="X">Stage-1</param>
                     <param id="1" name="Value">localScore</param>
                 </action>
+                <action id="33" name="Stop all" sid="4530439184899526" type="Audio" />
+                <action id="0" name="Play" sid="86483622587968" type="Audio">
+                    <param id="0" name="Audio file">Summary</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="7849145663297438">

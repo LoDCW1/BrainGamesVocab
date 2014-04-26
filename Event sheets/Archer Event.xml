@@ -50,7 +50,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="3629723196753054">
+        <event-block collapsed="1" sid="3629723196753054">
             <conditions>
                 <condition id="0" name="On function" sid="5194967930394376" type="Function">
                     <param id="0" name="Name">&quot;setTarget&quot;</param>
@@ -390,6 +390,13 @@
                     <param id="0" name="Variable">Stage</param>
                     <param id="1" name="Value">2</param>
                 </action>
+                <action id="33" name="Stop all" sid="316994257088961" type="Audio" />
+                <action id="0" name="Play" sid="3275758703905418" type="Audio">
+                    <param id="0" name="Audio file">Archer</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action disabled="1" id="0" name="Request URL" sid="644721462575002" type="AJAX">
                     <param id="0" name="Tag">&quot;questionSet&quot;</param>
                     <param id="1" name="URL">&quot;http://localhost/setVocab.php?Category=&quot;&amp;CategoryGame2</param>
@@ -605,6 +612,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="3432896481977791" type="Correct" />
+                        <action id="0" name="Play" sid="6902436548324131" type="Audio">
+                            <param id="0" name="Audio file">correct</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-10" name="Set value" sid="8276956813299353" type="tgtStand">
                             <param id="0" name="Instance variable">isClickable</param>
                             <param id="1" name="Value">0</param>
@@ -665,6 +678,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="3142569231601757" type="Wrong" />
+                        <action id="0" name="Play" sid="4982769054682887" type="Audio">
+                            <param id="0" name="Audio file">miss</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-11" name="Subtract from" sid="8978044796669162" type="System">
                             <param id="0" name="Variable">localScore</param>
                             <param id="1" name="Value">0.5</param>

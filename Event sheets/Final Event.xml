@@ -62,6 +62,13 @@
                 <condition id="-2" name="On start of layout" sid="8848724098073618" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="416072351705649" type="Audio" />
+                <action id="0" name="Play" sid="6717572014756812" type="Audio">
+                    <param id="0" name="Audio file">Home</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="2" name="Post to URL" sid="1904310172435066" type="AJAX">
                     <param id="0" name="Tag">&quot;SaveScoreGame1&quot;</param>
                     <param id="1" name="URL">HostURL&amp;&quot;savescores.php?UserID=&quot;&amp;UserID&amp;&quot;&amp;Category=&quot;&amp;CategoryGame1&amp;&quot;&amp;Score=&quot;&amp;scoreSet.At(0)</param>

@@ -233,6 +233,13 @@
                 <condition id="-2" name="On start of layout" sid="50425633184162" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="2514492333968342" type="Audio" />
+                <action id="0" name="Play" sid="6382722855104328" type="Audio">
+                    <param id="0" name="Audio file">Anagram - 4</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-9" name="Set value" sid="4922425896063572" type="System">
                     <param id="0" name="Variable">Count</param>
                     <param id="1" name="Value">0</param>
@@ -537,6 +544,12 @@
                             <param id="0" name="Variable">LetterIndex</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Play" sid="7191721504327801" type="Audio">
+                            <param id="0" name="Audio file">ToyChime1</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="156431959603365" type="choiceTile" />
                     </actions>
                 </event-block>
@@ -549,6 +562,12 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="2493546546109057" type="Wrong" />
+                        <action id="0" name="Play" sid="5513293635035229" type="Audio">
+                            <param id="0" name="Audio file">wrong</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-11" name="Subtract from" sid="7616437833772592" type="System">
                             <param id="0" name="Variable">localScore</param>
                             <param id="1" name="Value">0.25</param>

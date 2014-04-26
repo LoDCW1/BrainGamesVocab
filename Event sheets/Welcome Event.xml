@@ -335,6 +335,12 @@
                         <action id="-15" name="Set visible" sid="546666212894343" type="CountdownSprite">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="1589155286954973" type="Audio">
+                            <param id="0" name="Audio file">countDown</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="308421430244811" type="CountdownSprite" />
                         <action id="-16" name="Wait" sid="3961854182931435" type="System">
                             <param id="0" name="Seconds">1</param>
@@ -344,6 +350,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="2942447156393491" type="CountdownSprite">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="6752694193766362" type="Audio">
+                            <param id="0" name="Audio file">countDown</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="4341991609349471" type="CountdownSprite" />
                         <action id="-16" name="Wait" sid="7130985231613332" type="System">
@@ -355,6 +367,12 @@
                         <action id="-15" name="Set visible" sid="7042374995896044" type="CountdownSprite">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Play" sid="6692465492834262" type="Audio">
+                            <param id="0" name="Audio file">countDown</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="1604795855663022" type="CountdownSprite" />
                         <action id="-16" name="Wait" sid="4430186171770015" type="System">
                             <param id="0" name="Seconds">1</param>
@@ -364,6 +382,12 @@
                         </action>
                         <action id="-15" name="Set visible" sid="6835806712468469" type="CountdownSprite">
                             <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Play" sid="4669146369433999" type="Audio">
+                            <param id="0" name="Audio file">countDown</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="Fade" id="0" name="Restart fade" sid="164506602787177" type="CountdownSprite" />
                     </actions>

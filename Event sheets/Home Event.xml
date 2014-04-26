@@ -149,5 +149,18 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="7669233551724658">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9391476691572858" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="8449341594550751" type="Audio">
+                    <param id="0" name="Audio file">Home</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
